@@ -1,0 +1,9 @@
+{
+  "name": "gulp-starter-pack",
+  "description": "basic dependencies",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "*",
+    "normalize-css": "^7.0.0"
+  }
+}

@@ -1,0 +1,287 @@
+@media screen and (min-width: 1920px) {
+  body {
+    font-size: 19.66px; }
+  .wrapper {
+    max-width: 1562px; } }
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+  body {
+    font-size: 16.39px; }
+  .wrapper {
+    max-width: 1302px; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 14px; }
+  .nav__list--boys {
+    margin-top: 73px; } }
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  body {
+    font-size: 13px; }
+  .nav__col--info .nav__list {
+    margin-right: 105px; }
+  .stock__btn--half {
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); } }
+
+@media screen and (min-width: 414px) and (max-width: 566px) {
+  body {
+    font-size: 13px; }
+  .header__cube--white {
+    right: 0; }
+  .nav__col--info .nav__list {
+    margin-right: 50px; } }
+
+@media screen and (min-width: 320px) and (max-width: 413px) {
+  body {
+    font-size: 14px; }
+    body .nav__list {
+      -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      margin-right: 0; } }
+
+@media screen and (min-width: 1366px) {
+  .stock__full img, .stock__half img {
+    width: 100%; } }
+
+@media screen and (max-width: 1169px) {
+  .nav__wrapper {
+    background: #fff; } }
+
+@media screen and (max-width: 991px) {
+  .club360 {
+    position: relative; }
+  .participate-club {
+    width: 70%;
+    max-width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    color: #fff; }
+    .participate-club__text {
+      font-size: 15px; }
+  .footer__cube--white {
+    left: -48px;
+    top: -130px; }
+  .footer__cube--blue {
+    bottom: -85px; }
+  .nav__col {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%; }
+    .nav__col--collections {
+      margin-right: 0; }
+  .nav__list {
+    margin-bottom: 30px; }
+  .nav__item--header {
+    margin-bottom: 30px !important; }
+  .nav__list--contacts {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2; }
+  .nav__list--stock {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1; }
+  .nav__list--fashion {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3; }
+  .nav__col--info {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+
+@media screen and (max-width: 767px) {
+  .header__cube--blue {
+    display: none; }
+  .footer__cube--blue {
+    left: 30px; }
+  .nav__wrapper {
+    padding-left: 30px;
+    padding-right: 30px; }
+  .nav__list {
+    margin-right: 60px; }
+    .nav__list:last-child {
+      margin-right: 0 !important; }
+  .nav__col--info {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  .nav__item--club360 {
+    display: none; }
+  .nav__link {
+    font-size: 15px; }
+    .nav__link img {
+      width: 50%; }
+  .nav__item--header {
+    font-size: 25px; }
+  .nav__list--boys {
+    margin-top: 55px; }
+  .nav__list--contacts {
+    -webkit-box-ordinal-group: inherit;
+    -webkit-order: inherit;
+    -ms-flex-order: inherit;
+    order: inherit; }
+  .nav__list--stock {
+    -webkit-box-ordinal-group: inherit;
+    -webkit-order: inherit;
+    -ms-flex-order: inherit;
+    order: inherit; }
+  .nav__list--fashion {
+    -webkit-box-ordinal-group: inherit;
+    -webkit-order: inherit;
+    -ms-flex-order: inherit;
+    order: inherit; }
+  .stock {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .stock__half {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center; }
+    .stock__half img {
+      display: inline-block; }
+  .stock__btn--sale, .stock__btn--club {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+    padding-top: 15px;
+    padding-bottom: 15px; } }
+
+@media screen and (max-width: 566px) {
+  .stocks {
+    padding-top: 30px; }
+  .stock__half img {
+    width: 100%; }
+  .stock__btn--half {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  .stock__sale-text {
+    display: none; } }
+
+@media screen and (max-width: 413px) {
+  .header {
+    margin-bottom: 20px; }
+  .header__cube--white {
+    display: none; }
+  .header__menu-button {
+    position: static; }
+  .header__logo {
+    margin-right: 0; }
+  .header-sub {
+    margin-top: 10px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .header-sub .header-sub__link--deferred {
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1; }
+    .header-sub .header-sub__link--vk {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2; }
+    .header-sub .header-sub__link--instagram {
+      -webkit-box-ordinal-group: 4;
+      -webkit-order: 3;
+      -ms-flex-order: 3;
+      order: 3; }
+    .header-sub br {
+      display: none; }
+  .nav__close {
+    width: 23px;
+    height: 23px;
+    right: 15px; } }
+
+@media screen and (max-width: 391px) {
+  .club360 {
+    margin-top: 145px; } }
+
+/* SPECIFIC QUERIES */
+@media screen and (min-width: 461px) and (max-width: 790px) {
+  .footer__wrapper {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .footer__subscribe {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-right: auto;
+    margin-top: 35px; } }
+
+@media screen and (max-width: 460px) {
+  .footer__wrapper {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  .footer__list {
+    margin-bottom: 40px; }
+    .footer__list--buy {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2; }
+    .footer__list--info {
+      -webkit-box-ordinal-group: 4;
+      -webkit-order: 3;
+      -ms-flex-order: 3;
+      order: 3; }
+  .footer__subscribe {
+    margin-bottom: 50px;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1; }
+  .subscribe__text br {
+    display: none; } }
+
+@media screen and (max-width: 409px) {
+  .nav__list--boys {
+    margin-top: 0; } }
