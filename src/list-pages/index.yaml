@@ -1,0 +1,7 @@
+ProjectTitle: Lyceum
+
+PageList:
+- file: 360.html
+  ready: 70
+- file: stock.html
+  ready: 70
