@@ -1,0 +1,90 @@
+.vacancies
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrap
+  margin-top: em(48)
+  margin-bottom: em(105)
+
+  &__item
+    position: relative
+    margin: 0 em(14.5) em(30)
+    width: em(351)
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+
+  &__info
+    width: 100%
+    margin-bottom: em(3)
+    padding: em(3) em(12) em(8) em(12)
+    background-color: #125a88
+    box-sizing: border-box
+    cursor: pointer
+    transition: background ease .5s
+    &:hover
+      background-color: $accentColor
+    
+  &__title
+    margin-top: 0
+    margin-bottom: em(4, 18)
+    font-size: em(18)
+    line-height: 1.1
+    text-transform: uppercase
+    color: #fff
+
+  &__clarify
+    margin-top: 0
+    margin-bottom: 0
+    font-family: 'ApercuPro-Light', Arial, sans-serif
+    font-size: em(14)
+    color: #fff
+
+  &__description
+    padding: em(30, 12) em(12, 12) em(33, 12)
+    font-size: em(12)
+    border: 2px solid $mainColor
+
+    p
+      line-height: em(13, 12)
+
+  &__btn
+    position: absolute
+    left: 50%
+    bottom: em(-19)
+    padding-left: em(75)
+    padding-right: em(75)
+    transform: translateX(-50%)
+
+@media screen and (max-width: 992px)
+  .vacancies__description
+    display: none
+
+  .vacancies__btn
+    width: 100%
+    display: none
+    padding-left: 10px
+    padding-right: 10px
+    box-sizing: border-box
+
+@media screen and (min-width: 992px) and (max-width: 1140px)
+  .vacancies__item
+    margin-left: 0
+    margin-right: 15px
+    width: 300px
+
+@media screen and (min-width: 767px) and (max-width: 991px)
+  .vacancies__item
+    margin-left: 0
+    margin-right: 15px
+    width: 230px
+
+@media screen and (max-width: 768px)
+  .vacancies
+    margin-bottom: 150px
+    justify-content: center
+
+  .vacancies__item
+    margin-left: 0
+    margin-right: 0
+    flex-basis: 100%

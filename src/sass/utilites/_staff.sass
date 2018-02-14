@@ -1,0 +1,87 @@
+.wrapper
+  max-width: 1112px
+  margin: 0 auto
+  padding-left: 15px
+  padding-right: 15px
+
+.row
+  display: flex
+  flex: 0 0 100%
+  flex-wrap: wrap
+  align-items: center
+  &--top
+    align-items: flex-start
+
+.burger
+  position: relative
+  display: inline-block
+  margin-top: 13px
+  margin-bottom: 13px
+  width: em(17, 30)
+  height: em(3, 30)
+  background-color: $mainColor
+  &::after,
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    width: em(17, 30)
+    height: em(3, 30)
+    background-color: $mainColor
+  &::before
+    top: em(-8, 30)
+  &::after
+    bottom: em(-10, 30)
+
+.bag-ico
+  display: inline-block
+  @include sprite-box($s-bag)
+
+.btn
+  display: inline-block
+  padding:  em(12, 14) em(67, 14)
+  text-transform: uppercase
+  color: #fff
+  text-decoration: none
+  text-align: center
+
+  &--green
+    background-color: $accentColor
+    transition: background ease .4s
+    &:hover
+      background-color: #125a88
+
+  &--sm
+    padding-left: em(58)
+    padding-right: em(58)
+
+  &--xs
+    padding-left: em(20)
+    padding-right: em(20)
+
+.cube
+  position: absolute
+
+  &--blue-left
+    @include sprite-box($s-cube-blue-left-top)
+
+  &--blue-right
+    @include sprite-box($s-cube-blue-left-top)
+    transform: rotate(61deg)
+
+  &--white-left
+    @include sprite-box($s-cube-white-left-top)
+
+  &--aqua-left
+    @include sprite-box($s-cube-aqua-left-top)
+
+  &--white-right
+    @include sprite-box($s-cube-white-right-top)
+
+.logo__img
+  width: em(73)
+  height: em(56)
+
+.play-icon
+  display: inline-block
+  @include sprite-box($s-play-icon)

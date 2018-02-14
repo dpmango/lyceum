@@ -1,0 +1,64 @@
+.stocks
+  padding-top: em(64)
+  padding-bottom: em(92)
+
+.stock
+  position: relative
+  display: flex
+  overflow: hidden
+
+  &__full
+    flex-basis: 100%
+    img
+      width: 100%
+
+  &__full,  &__half
+    overflow: hidden
+    img
+      transition: transform ease 1s
+    &:hover img
+      transform: scale(1.01)
+
+  &__half
+    position: relative
+    flex-basis: 50%
+    margin: 0 em(7.5) em(20)
+    overflow: hidden
+    &:hover > div > img
+      transform: scale(1.01)
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+
+  &--club
+    margin-bottom: em(24)
+
+  &--sale
+    margin-bottom: em(20)
+
+  &__btn
+    position: absolute
+
+    &--club
+      bottom: 20%
+      right: 17%
+
+    &--sale
+      bottom: 17%
+      right: 8%
+
+    &--half
+      right: 14.3%
+      bottom: 15%
+
+    &--collection
+      right: 6.6%
+
+  &__sale-text
+    position: absolute
+    top: 38%
+    right: 25.7%
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    text-transform: uppercase
+    font-size: em(48)

@@ -5,3 +5,7 @@ PageList:
   ready: 70
 - file: stock.html
   ready: 70
+- file: homepage.html
+  ready: 20
+- file: vacancies.html
+  ready: 20

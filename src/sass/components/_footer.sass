@@ -1,0 +1,67 @@
+.footer
+  margin-bottom: em(50)
+
+  &__wrapper
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    padding: em(32) em(52) em(35) em(64)
+    border: 2px solid $mainColor
+
+  &__list
+    &--buy
+      margin-right: em(44)
+
+  &__item
+    margin-bottom: em(13)
+    color: $mainColor
+    &:last-child
+      margin-bottom: 0
+
+    &--header
+      font-size: em(14)
+      font-family: 'ApercuPro-Bold', Arial, sans-serif
+      text-transform: uppercase
+
+  &__link
+    color: $mainColor
+
+  &__subscribe
+    flex-basis: em(330)
+    margin-left: auto
+    text-align: center
+
+  &__cube
+    &--white
+      top: em(-75)
+      left: 44.2%
+
+    &--blue
+      bottom: em(-46)
+      left: 59%
+
+  &__copyright
+    margin-top: em(7)
+    font-size: em(12)
+    line-height: em(16)
+    text-align: right
+
+.subscribe
+  &__title
+    margin: 0 0 em(10)
+    font-size: em(14)
+    text-transform: uppercase
+
+  &__text
+    margin: 0 0 em(36, 12)
+    font-size: em(12)
+    line-height: em(19, 12)
+
+  &__btn
+    padding: em(9) em(42)
+    border: 2px solid $mainColor
+    transition: background ease .4s
+    color: $mainColor
+    text-decoration: none
+    &:hover
+      background-color: #c6c6c6

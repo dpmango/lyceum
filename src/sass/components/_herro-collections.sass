@@ -1,0 +1,174 @@
+.hero-collections
+  margin-top: em(-37)
+  overflow: hidden
+  padding-bottom: em(76)
+
+  &--type-slider
+    margin-top: em(-190)
+    padding-top: em(150)
+    padding-bottom: em(165)
+    margin-bottom: em(94)
+
+
+  &__slider
+    margin-top: em(-73)
+
+  &__gradient
+    position: relative
+    background: linear-gradient(to right, #00a0a9 0%, #006a8e 100%)
+    background-size: contain
+    transform: rotate(-3deg)
+    width: 100%
+    height: em(400)
+    margin-top: em(37)
+    margin-left: em(-30)
+    margin-right: em(-30)
+    padding-left: em(30)
+    padding-right: em(30)
+
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    transform: rotate(3deg)
+
+
+  &__item
+    position: relative
+    flex-basis: 50%
+    margin-bottom: em(15)
+
+  &__photo
+    position: absolute
+
+    &--left
+      left: em(34)
+      top: em(5)
+
+    &--right
+      right: em(69)
+      top: em(-14)
+
+  &__collection
+    float: left
+    column-count: 2
+    column-gap: em(7)
+
+    &--left
+      margin-top: em(193)
+      margin-left: 39.4%
+
+    &--right
+      margin-top: em(129)
+      margin-left: 24.9%
+
+  &__link
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    text-transform: uppercase
+    text-decoration: none
+    color: #fff
+    &:hover
+      text-decoration: underline
+
+  &__cube
+    &--aqua-left
+      bottom: -5.6%
+      left: -2%
+
+    &--white-left
+      left: 44.8%
+      bottom: -8%
+
+    &--blue-left
+      right: 20%
+      bottom: -23%
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1020px)
+  .hero-collections
+    overflow: visible
+
+    &__gradient
+      margin-left: 0
+      margin-right: 0
+      padding-left: 0
+      padding-right: 0
+      height: 100%
+      transform: none
+
+
+    &__wrapper
+      transform: none
+
+    &__item
+      flex-basis: 100%
+      display: flex
+      justify-content: center
+
+    &__photo
+      position: static
+
+    &__photo--right
+      order: 1
+
+    &__collection--left
+      margin-left: -160px
+
+    &__collection--right
+      margin-right: -183px
+      margin-left: 0
+      margin-top: 150px
+
+    &__cube--aqua-left
+      top: 42%
+      left: 100px
+
+    &__cube--white-left
+      bottom: 85px
+      left: 165px
+
+    &__cube--blue-left
+      bottom: -62px
+      right: 96px
+
+    &__slider
+      margin-top: 30px
+      margin-bottom: 30px
+
+@media screen and (max-width: 767px)
+  .hero-collections
+    &--type-slider
+      margin-bottom: 0
+
+@media screen and (max-width: 540px)
+  .hero-collections
+    &--type-slider
+      margin-top: 0
+      padding-top: 0
+      margin-bottom: 0
+
+    &__gradient
+      margin-top: 0
+
+@media screen and (max-width: 460px)
+  .hero-collections
+    &__photo
+      img
+        width: 100%
+
+    &__cube--aqua-left
+      display: none
+
+    &__cube--white-left
+      display: none
+
+    &__cube--blue-left
+      display: none
+
+    &__slider
+      padding: 15px
+
+@media screen and (max-width: 380px)
+  .hero-collections
+    &__collection--left
+      margin-top: 150px

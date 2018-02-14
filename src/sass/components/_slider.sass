@@ -1,0 +1,31 @@
+.slider
+  max-width: em(920)
+  width: 100%
+  margin: 0 auto
+  padding: em(20) em(22)
+  background-color: #fff
+  border-radius: 15px
+  box-shadow: -2px 2px 24px 5px rgba(0, 0, 0, 0.5)
+
+  &__image
+    width: 100%
+
+.slider__arrow
+  position: absolute
+  bottom: 24px
+  width: 16px
+  height: 16px
+  border-bottom: 3px solid
+  border-left: 3px solid
+  border-color: #000
+  z-index: 10
+  cursor: pointer
+
+  &--prev
+    transform: rotate(45deg)
+    right: 93px
+
+  &--next
+    transform: rotate(-135deg)
+    right: 52px
+

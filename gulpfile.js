@@ -12,10 +12,10 @@ let gulp 		= require('gulp'),
 	cache       = require('gulp-cache'),
 	spritesmith = require('gulp.spritesmith'),
 	flexbugs    = require('postcss-flexbugs-fixes'),
-	postcss     = require('gulp-postcss');
+	postcss     = require('gulp-postcss'),
+	consolidate = require('gulp-consolidate'),
+	yaml        = require('require-yaml');
 
-var consolidate = require('gulp-consolidate');
-var yaml        = require('require-yaml');
 
 gulp.task('sass', function () {
 	return gulp.src('src/sass/**/*.+(sass|scss)')
@@ -39,7 +39,8 @@ gulp.task('css-libs', function () {
 
 gulp.task('scripts', function () {
 	return gulp.src([
-		'src/libs/jquery/dist/jquery.min.js'
+		'src/libs/jquery/dist/jquery.min.js',
+		'src/libs/slick-carousel/slick/slick.min.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -80,13 +81,12 @@ gulp.task('sprite', function() {
 
 gulp.task('list-pages', function() {
 	delete require.cache[require.resolve('./src/list-pages/index.yaml')]
-  var pages = require('./src/list-pages/index.yaml');
-  return gulp
-    .src('src/list-pages/index.html')
-    .pipe(consolidate('lodash', {
-      pages: pages
-    }))
-    .pipe(gulp.dest('src'));
+	var pages = require('./src/list-pages/index.yaml');
+	return gulp.src('src/list-pages/index.html')
+		.pipe(consolidate('lodash', {
+	  		pages: pages
+		}))
+		.pipe(gulp.dest('src'));
 });
 
 gulp.task('liveReload', function () {

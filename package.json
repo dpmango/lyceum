@@ -26,7 +26,7 @@
     "imagemin-pngquant": "^5.0.1",
     "path": "^0.12.7",
     "postcss-flexbugs-fixes": "^3.3.0",
-    "require-yaml": "^0.0.1"
+    "require-yaml": "0.0.1"
   },
   "browserslist": [
     "> 1%",

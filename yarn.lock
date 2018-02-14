@@ -4861,7 +4861,7 @@ require-object-coercible-x@^1.4.1:
   dependencies:
     is-nil-x "^1.4.1"
 
-require-yaml@^0.0.1:
+require-yaml@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/require-yaml/-/require-yaml-0.0.1.tgz#2e1b18d913c3baa72a5a4d373b6f138ddd2c32bd"
   dependencies:

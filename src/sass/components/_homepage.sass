@@ -1,0 +1,175 @@
+.style-news
+  position: relative
+  margin-bottom: em(60)
+  padding-top: 1px
+  height: em(800)
+  background: url("../img/style-news.jpg") no-repeat  69% 0
+
+  &__how-created
+    float: left
+    margin-top: em(233)
+    margin-left: em(137)
+
+  &__recent
+    margin-top: em(163)
+    margin-right: em(142)
+    float: right
+    width: em(201)
+    height: em(493)
+    border: 2px solid $mainColor
+    border-left: 0
+
+  &__list
+    margin-top: em(243)
+    margin-left: em(-74)
+
+  &__list-item
+    margin-bottom: em(16)
+
+  &__list-link
+    font-size: em(12)
+    text-transform: uppercase
+    color: $mainColor
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
+  &__cube--blue-left
+    transform: scale(0.65) rotate(-9deg)
+    top: em(50)
+    left: 29%
+
+  &__cube--blue-right
+    right: 18.2%
+    top: 5.1%
+    transform: rotate(61deg) scale(0.93)
+
+  &__cube--white-left
+    right: 8px
+    bottom: 35.7%
+    transform: scale(0.9) rotate(-1deg)
+
+
+.how-created
+  position: relative
+  width: em(202)
+  height: em(272)
+  border: 2px solid $mainColor
+  z-index: -5
+
+  &__title
+    margin: em(13, 16.38) 0 0 em(-9, 16.38)
+    padding-top: em(7, 16.38)
+    padding-bottom: em(20, 16.38)
+    text-transform: uppercase
+    background-color: #f7f9f7
+
+    span
+      display: block
+      margin-bottom: 5px
+
+    span:first-child
+      font-family: 'ApercuPro-Light', Arial, sans-serif
+      font-size: em(74, 16.38)
+      font-weight: 400
+
+    span:nth-child(2n)
+      margin-left: em(3, 16.38)
+      font-size: em(22, 16.38)
+
+    span:last-child
+      margin-left: em(3, 16.38)
+      margin-bottom: 0
+      font-size: em(24, 16.38)
+
+  &__cube
+    &--blue-right
+      bottom: em(-42)
+      left: em(63)
+
+    &--aqua-left
+      top: em(-66)
+      right: em(-89)
+      transform: scale(0.93)
+
+  &__play
+    position: absolute
+    right: em(-38)
+    top: em(58)
+
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      content: ''
+      width: 100%
+      height: 100%
+      background-color: #f7f9f7
+      z-index: -1
+
+@media  screen and (max-width: 1020px)
+  .style-news
+    margin-bottom: 200px
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-size: contain
+    background-position: 50% 0
+
+    &__how-created
+      float: none
+      margin: 18px 0 0 50%
+      padding-top: 15px
+      padding-bottom: 0
+      height: 205px
+      background: #f7f9f7
+      z-index: 1
+
+    &__recent
+      float: none
+      margin: 242px 0 0 50%
+
+    &__list
+      margin-top: 65px
+      margin-bottom: 54px
+
+    &__cube--blue-left
+      top: 10px
+      left: 0
+
+    .how-created__cube--aqua-left
+      display: none
+
+    .how-created__cube--blue-right
+      display: none
+
+@media screen and (max-width: 540px)
+  .style-news
+    margin-bottom: 0
+    background-image: none
+
+    &__how-created
+      margin-left: 0
+
+    &__recent
+      margin-left: 0
+      margin-top: 55px
+      width: 100%
+      height: auto
+      text-align: center
+      border: 2px solid #000
+
+    &__list
+      margin-left: 0
+      display: inline-block
+      text-align: center
+
+    &__cube--blue-right
+      display: none
+
+    &__cube--white-left
+      display: none
+
+@media screen and (max-width: 440px)
+  .style-news__cube--blue-left
+    top: -80px
