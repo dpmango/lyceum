@@ -61,7 +61,7 @@
 
 .cube
   position: absolute
-
+  z-index: 10
   &--blue-left
     @include sprite-box($s-cube-blue-left-top)
 
@@ -75,13 +75,192 @@
   &--aqua-left
     @include sprite-box($s-cube-aqua-left-top)
 
+  &--aqua-right
+    @include sprite-box($s-cube-aqua-right-top)
+
   &--white-right
     @include sprite-box($s-cube-white-right-top)
+
+
 
 .logo__img
   width: em(73)
   height: em(56)
 
+// Fade-zoom animation for first dialog
+
 .play-icon
   display: inline-block
-  @include sprite-box($s-play-icon)
+  width: em(71, 14)
+  height: em(71, 14)
+  border: em(6, 14) solid #008a7b
+  border-radius: 50%
+  background-color: $grey
+  box-sizing: border-box
+  &::after
+    position: absolute
+    top: 50%
+    left: 59%
+    transform: translate(-50%, -50%)
+    content: ''
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: em(18.5) 0 em(18.5) em(32)
+    border-color: transparent transparent transparent #008a7a
+
+/* Video modal */
+.popup-buble
+  .mfp-close
+    position: absolute
+    top: 40px
+    right: 25px
+    z-index: 10000
+    opacity: 1
+    width: auto
+    height: auto
+    font-size: 0
+    padding: 0
+
+  .popup-dialog, .mfp-content
+    opacity: 0
+    transition: all 0.2s ease-in-out
+    transform: scale(0.8) translate3d(0,50%,0)
+  &.mfp-ready
+    .popup-dialog, .mfp-content
+      opacity: 1
+      transform: scale(1)
+  &.mfp-removing
+    .popup-dialog, .mfp-content
+      transform: scale(0.8) translate3d(0,-50%,0)
+      opacity: 0
+  &.mfp-bg
+    background: rgba(#231F20, .85)
+    opacity: 0
+    transition: opacity 0.3s ease
+  &.mfp-ready.mfp-bg
+    opacity: 1
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+.mfp-iframe-holder
+  max-width: 1680px
+  padding-left: 50px
+  padding-right: 50px
+  .mfp-content
+    max-width: 100%
+    width: 100vw
+    height: 56.25vw
+    max-height: 100vh
+    max-width: 177.78vh
+    margin: auto
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+
+// Fade-move animation
+.my-mfp-slide-bottom
+  .zoom-anim-dialog
+    opacity: 0
+    transition: all 0.2s ease-out
+    transform: translateY(-20px) perspective(600px) rotateX(10deg)
+  &.mfp-ready .zoom-anim-dialog
+    opacity: 1
+    transform: translateY(0) perspective(600px) rotateX(0)
+  &.mfp-removing .zoom-anim-dialog
+    opacity: 0
+    transform: translateY(-10px) perspective(600px) rotateX(10deg)
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.3s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: 0.8
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+
+/* Video close button */
+
+.close-button
+  $size: 40px
+  height: $size
+  width: $size
+  position: relative
+  box-sizing: border-box
+  line-height: $size
+  display: inline-block
+
+  &:before, &:after
+    $width: 40px
+    $height: 5px
+    transform: rotate(-45deg)
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -$height/2
+    margin-left: -$width/2
+    display: block
+    height: $height
+    width: $width
+    background-color: #fff
+    transition: all 0.25s ease-out
+
+  &:after
+    transform: rotate(-135deg)
+  &:hover
+    &:before, &:after
+      transform: rotate(0deg)
+
+.pull-left
+  float: left
+
+.pull-right
+  float: right
+
+.nice-select
+  width: em(170)
+  padding: 0 em(31, 14) 0 0
+  height: em(39, 14)
+  border: em(2, 14) solid $mainColor
+  border-radius: 0
+  background-color: $grey
+  line-height: em(33, 14)
+  text-align: right !important
+  &::after
+    right: em(7)
+    margin-top: em(-6)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: em(11) em(8) 0 em(8)
+    border-color: #000000 transparent transparent transparent
+    transform: none
+
+  &.open
+    .list
+      width: 100%
+      border-radius: 0
+      border: em(2) solid $mainColor
+
+    &:after
+      top: em(13)
+      right: em(12)
+      transform: rotate(-180deg)
+
+  .current
+    display: inline-block
+    font-family: 'ApercuPro-Light', Arial, sans-serif
+    font-size: em(14)
+    height: 100%
+
+  .list
+    z-index: 100
+
+  &:active,
+  &.open,
+  &:focus
+    border-color: $blue

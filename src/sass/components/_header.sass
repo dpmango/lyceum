@@ -5,8 +5,12 @@
   flex-wrap: wrap
 
   &--with-bg
+    margin-bottom: em(18)
     padding-bottom: em(230)
     background-size: contain
+
+    .nav
+      left: 0
 
   .menu
     position: absolute
@@ -32,7 +36,7 @@
     margin-right: em(2, 30)
 
   &__logo
-    margin-left: auto
+    margin-left: 35%
     margin-right: auto
 
 
@@ -182,12 +186,14 @@
       left: auto
       bottom: -225px
 
-
+@media screen and (max-width: 767px)
+  .header__cube--white
+    display: none
 
 @media screen and (max-width: 991px)
   .header--with-bg
     .header__cube--white-right
-      display: none
+      display: nonez
 
 @media screen and (max-width: 566px)
   .header--with-bg
@@ -206,6 +212,9 @@
     max-width: 100% !important
 
 @media screen and (max-width: 404px)
+  .header__logo
+    margin-left: auto
+
   .header--with-bg
     margin-left: -15px
     margin-right: -15px

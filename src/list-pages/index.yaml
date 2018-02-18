@@ -6,6 +6,14 @@ PageList:
 - file: stock.html
   ready: 70
 - file: homepage.html
-  ready: 20
+  ready: 70
 - file: vacancies.html
-  ready: 20
+  ready: 70
+- file: product-card.html
+  ready: 70
+- file: collections.html
+  ready: 70
+- file: contacts.html
+  ready: 70
+- file: cart.html
+  ready: 70

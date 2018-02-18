@@ -1,0 +1,65 @@
+.categories
+  position: relative
+  display: flex
+  flex-direction: column
+  align-self: self-start
+  min-width: em(154)
+
+  &--product-card
+    margin-top: em(47)
+
+  &__list
+    margin-bottom: em(28)
+
+  &__item
+    margin-bottom: em(8, 12)
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-size: em(12)
+    &:last-child
+      margin-bottom: 0
+
+    &--title
+      font-size: em(14)
+      text-transform: uppercase
+
+    &--collection
+      text-transform: none
+      span
+        font-family: 'ApercuPro-Light', Arial, sans-serif
+
+  &__link
+    color: $mainColor
+    text-decoration: none
+
+  &__cube
+    bottom: -12.7%
+    right: -35%
+    z-index: 100
+
+/* Adaptive */
+@media screen and (max-width: 767px)
+  body
+    position: relative
+
+  .categories
+    position: fixed
+    top: 0
+    left: -100%
+    bottom: 0
+    width: 175px
+    background: #fff
+    padding: 20px
+    margin-top: 0
+    box-shadow: 5px 0 10px -1px rgba(0, 0, 0, 0.5)
+    z-index: 100
+    transition: left .6s ease-in-out, opacity .4s ease-in
+    opacity: 0
+    overflow-y: scroll
+    &.open
+      display: block
+      left: 0
+      opacity: 1
+
+
+    &__list
+      font-size: em(15)

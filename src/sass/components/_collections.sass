@@ -1,0 +1,93 @@
+.products-list-wrapper
+  padding-left: em(35)
+  margin-top: em(-3)
+  margin-bottom: em(110)
+
+.products-list
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  margin-top: em(21)
+
+  &__cube
+    &--blue-right
+      bottom: 22.7%
+      right: 20%
+      transform: scale(0.93) rotate(61deg)
+
+    &--aqua-left
+      right: -5%
+      top: 46%
+      transform: scale(0.9)
+
+    &--aqua-right
+      bottom: -1.7%
+      left: -6.4%
+
+.product
+  max-width: em(225)
+  max-height: em(385)
+  margin-right: em(6)
+  margin-bottom: em(3)
+  z-index: 10
+  transition: all ease 1s
+  overflow: hidden
+  border: 2px solid transparent
+  box-sizing: border-box
+  color: $mainColor
+  text-decoration: none
+  &:hover
+    text-decoration: none
+    color: $mainColor
+
+  img
+    transition: transform ease 1s
+
+  &:nth-child(4n)
+    margin-right: 0
+  &:hover
+    border-color: $blue
+    img
+      transform: scale(1.02)
+
+  &__title
+    margin-top: em(8, 12)
+    margin-bottom: em(5, 12)
+    font-size: em(12)
+    text-align: center
+
+
+  &__price
+    margin-top: em(3, 12)
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-size: em(12)
+    text-align: center
+
+
+
+
+@media screen and (max-width: 1136px)
+  .product
+    max-width: 180px
+    margin-right: 3px
+    img
+      width: 100%
+    &:nth-child(4n)
+      margin-right: 3px
+
+@media screen and (max-width: 767px)
+  .products-list-wrapper
+    padding-left: 0
+
+@media screen and (min-width: 633px) and (max-width: 767px)
+  .product
+    max-width: 200px
+    margin-right: 10px
+
+@media  screen and (max-width: 632px)
+  .products-list
+    justify-content: center
+
+  .product
+    margin-left: 7px
+    margin-right: 7px

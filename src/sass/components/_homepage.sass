@@ -55,14 +55,13 @@
   width: em(202)
   height: em(272)
   border: 2px solid $mainColor
-  z-index: -5
 
   &__title
     margin: em(13, 16.38) 0 0 em(-9, 16.38)
     padding-top: em(7, 16.38)
     padding-bottom: em(20, 16.38)
     text-transform: uppercase
-    background-color: #f7f9f7
+    background-color: $grey
 
     span
       display: block
@@ -97,17 +96,7 @@
     right: em(-38)
     top: em(58)
 
-    &::before
-      position: absolute
-      top: 0
-      left: 0
-      content: ''
-      width: 100%
-      height: 100%
-      background-color: #f7f9f7
-      z-index: -1
-
-@media  screen and (max-width: 1020px)
+@media  screen and (max-width: 1140px)
   .style-news
     margin-bottom: 200px
     display: flex
@@ -122,7 +111,7 @@
       padding-top: 15px
       padding-bottom: 0
       height: 205px
-      background: #f7f9f7
+      background: $grey
       z-index: 1
 
     &__recent
@@ -137,11 +126,15 @@
       top: 10px
       left: 0
 
+    &__cube--blue-right
+      display: none
+
     .how-created__cube--aqua-left
       display: none
 
     .how-created__cube--blue-right
       display: none
+
 
 @media screen and (max-width: 540px)
   .style-news

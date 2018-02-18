@@ -40,7 +40,9 @@ gulp.task('css-libs', function () {
 gulp.task('scripts', function () {
 	return gulp.src([
 		'src/libs/jquery/dist/jquery.min.js',
-		'src/libs/slick-carousel/slick/slick.min.js'
+		'src/libs/slick-carousel/slick/slick.min.js',
+        'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+        'src/libs/jquery-nice-select/js/jquery.nice-select.min.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -64,7 +66,7 @@ gulp.task('sprite', function() {
         gulp.src('src/img/sprite/*.*') // путь, откуда берем картинки для спрайта
             .pipe(spritesmith({
                 imgName: 'sprite.png',
-                cssName: '_sprite.sass',
+                cssName: 'components/_sprite.sass',
                 cssFormat: 'sass', // в каком формате выводить css
                 algorithm: 'binary-tree', // алгоритм сортировки иконок в спрайте
                 imgPath: 'img/sprite.png', // путь до спрайта

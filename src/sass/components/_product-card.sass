@@ -1,0 +1,358 @@
+.product-wrapper
+  display: flex
+  padding: 0
+
+.product-card-wrapper
+  position: relative
+  display: flex
+  flex-wrap: wrap
+
+.product-card
+  margin: em(-3) 0 em(94) em(37)
+
+  &__image
+    max-width: em(445)
+    flex-basis: 50%
+    flex-shrink: 2
+    img
+      width: 100%
+
+  &__info
+    padding-left: em(29)
+    flex-basis: 40%
+    flex-shrink: 1
+
+  &__filters
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: em(13)
+
+  &__select
+    margin-right: em(10)
+
+    &--age
+      padding-right: em(41)
+
+    &--other
+      padding-right: em(56)
+
+  &__cube
+    &--blue
+      right: 19%
+      bottom: 14%
+      transform: rotate(27deg) scale(0.94)
+    &--aqua
+      top: 35.8%
+      right: -1%
+
+
+.product-info
+  position: relative
+  padding: em(2) em(29)
+
+  &__title
+    margin: 0 em(9, 24) em(5, 24) 0
+    font-size: em(24)
+
+  &__price
+    margin-top: 0
+    margin-bottom: em(21, 36)
+    font-family: 'ApercuPro-Regular', Arial, sans-serif
+    font-size: em(36)
+    span
+      margin-left: em(5, 24)
+      font-size: em(24, 36)
+
+  &__description
+    margin-top: em(10)
+    margin-bottom: em(17)
+    font-family: 'ApercuPro-Light', Arial, sans-serif
+    word-break: break-all
+    white-space: pre-wrap
+    line-height: em(22)
+
+  &__code
+    margin-bottom: em(30, 12)
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-size: em(12)
+
+  &__count
+    margin-bottom: em(31, 12)
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-size: em(12)
+    span
+      font-family: 'ApercuPro-Light', Arial, sans-serif
+
+
+
+.product-colors
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrap
+  align-items: center
+  margin-bottom: em(20)
+
+  &__item
+    margin-right: em(5)
+    width: em(16)
+    height: em(16)
+    &:last-child
+      margin-right: 0
+
+  &__title
+    width: auto
+    height: auto
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-size: em(12)
+    margin-right: em(9, 12)
+
+  &__color
+    display: block
+    width: 100%
+    height: 100%
+    box-sizing: border-box
+
+    &--black
+      background-color: #000
+
+    &--white
+      border: 1px solid #000
+      background-color: #fff
+
+    &--blue
+      background-color: #125a88
+      
+    &--purple
+      background-color: #7964ab
+      
+    &--grey
+      background-color: #555555
+
+
+.product-sizes
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrap
+
+  &__item
+    margin-bottom: em(4)
+    margin-right: em(5)
+    width: em(28)
+    height: em(28)
+    box-sizing: border-box
+    border: em(2) solid $mainColor
+    text-align: center
+
+  &__size
+    display: block
+    padding-top: em(4)
+    width: 100%
+    height: 100%
+    font-family: 'ApercuPro-Light', Arial, sans-serif
+    text-decoration: none
+    color: #000
+    box-sizing: border-box
+
+
+.product-structure
+  margin-bottom: em(21)
+  &__title
+    font-family: 'ApercuPro-Bold', Arial, sans-serif !important
+    font-size: em(12)
+
+  &__item
+    font-family: 'ApercuPro-Light', Arial, sans-serif
+    font-size: em(12)
+    line-height: em(20, 12)
+
+.product-photos
+  display: flex
+  flex-wrap: wrap
+  &__item
+    margin-right: em(10)
+    margin-bottom: em(10)
+    z-index: 10
+    &:last-child
+      margin-right: 0
+      
+.product-defer
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  margin-top: em(5)
+  margin-bottom: em(38)
+  flex-basis: 100%
+
+  &__button
+    margin-left: em(82)
+    margin-right: em(10)
+    display: inline-block
+    padding: em(11) em(52)
+    color: #000
+    border: em(2) solid $mainColor
+    text-decoration: none
+    transition: all ease .5s
+    &:hover
+      border-color: $blue
+      background-color: #fff
+      text-decoration: none
+      color: $blue
+
+  p
+    display: inline-block
+    margin-top: 0
+    text-align: left
+    font-family: 'ApercuPro-Light', Arial, sans-serif
+    line-height: em(23)
+
+.similar
+  position: relative
+  flex-basis: 100%
+
+  &__title
+    margin-bottom: em(38, 14)
+    font-size: em(14)
+    text-transform: uppercase
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    margin-right: em(4)
+    margin-bottom: em(10)
+    &:last-child
+      margin-right: 0
+
+  &__link
+    overflow: hidden
+    &:hover img
+      transform: scale(1.03)
+      transition: transform ease .5s
+    img
+      width: em(128)
+      height: em(193)
+      transition: transform ease .5s
+
+
+  &__cube
+    &--aqua-right
+      bottom: -11px
+      left: -61px
+      z-index: -1
+
+    &--aqua-left
+      right: -47px
+      top: -65px
+      transform: scale(0.91)
+
+
+.categories-show
+    padding:  20px 10px
+    transition: left .65s ease-in-out
+    cursor: pointer
+    box-sizing: border-box
+    display: none
+    position: fixed
+    top: 50%
+    left: 0
+    transform: translateY(-50%) rotate(0deg)
+    z-index: 100
+    width: 40px
+    height: 100px
+    background: rgba(0, 0, 0, 0.5)
+    border: none
+
+    span
+      display: block
+      position: absolute
+      height: 4px
+      width: 70%
+      background: #fff
+      opacity: 1
+      left: 15%
+      transform: rotate(0deg)
+      transition: .25s ease-in-out .6s
+
+
+    span:nth-child(1)
+      top: 39px
+
+    span:nth-child(2),
+    span:nth-child(3)
+      top: 47px
+
+    span:nth-child(4)
+      top: 55px
+
+
+    &.open span:nth-child(1)
+      top: 18px
+      width: 0
+      left: 50%
+
+
+    &.open span:nth-child(2)
+      transform: rotate(45deg)
+
+    &.open span:nth-child(3)
+      transform: rotate(-45deg)
+
+
+    &.open span:nth-child(4)
+      top: 18px
+      width: 0
+      left: 50%
+
+/* Adaptive */
+@media screen and (max-width: 1040px)
+  .main .cube
+    display: none
+
+  .product-wrapper
+    padding-top: 51px
+
+  .product-defer
+    justify-content: flex-start
+    flex-direction: column
+    &__button
+      margin-left: auto
+      margin-right: auto
+      order: 1
+
+    p
+      display: block
+
+  .similar
+    margin-bottom: 100px
+
+@media screen and (max-width: 800px)
+  .product-card
+    margin-left: 0
+
+    &__select
+      margin-bottom: 5px
+      width: 150px
+
+    &__filters
+      justify-content: center
+
+  .categories-show
+    display: block
+    &.open
+      left: 215px
+
+  .categories__cube
+    display: none
+
+@media screen and (max-width: 575px)
+  .product-card-wrapper
+    justify-content: center
+
+  .product-card__image
+    flex-basis: 60%
+    justify-content: center
+
+  .product-card__info
+    flex-basis: 100%
+    padding-top: 30px

@@ -6,8 +6,8 @@ $browser-context: 14 // Default
 
 @import "libs"
 @import "fonts"
-@import "sprite"
 @import "utilites/variables"
+@import "components/sprite"
 @import "utilites/staff"
 @import "components/header"
 @import "components/footer"
@@ -18,6 +18,11 @@ $browser-context: 14 // Default
 @import "components/news-column"
 @import "components/herro-collections"
 @import "components/vacancies"
+@import "components/categories"
+@import "components/product-card"
+@import "components/collections"
+@import "components/contacts"
+@import "components/cart"
 @import "media"
 
 
@@ -30,7 +35,8 @@ body
   line-height: 1
   color: $mainColor
   font-weight: 400
-  background-color: #f7f9f7
+  height: 100%
+  background-color: $grey
 
 ul
   margin: 0
@@ -42,3 +48,8 @@ h1, h2, h3, h4, h5, h6
 
 button
   padding: 0
+
+a:hover
+  color: #28b6ae
+  transition: color ease-in-out .2s
+  text-decoration: underline

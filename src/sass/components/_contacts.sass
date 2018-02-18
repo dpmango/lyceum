@@ -1,0 +1,30 @@
+.contacts
+  margin-top: em(50)
+  margin-bottom: em(85)
+  &__address
+    margin-bottom: em(4, 18)
+    padding: em(16, 18) em(97, 18)
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-size: em(18)
+    color: #fff
+    background-color: #125a88
+    
+    &--aqua
+      margin-top: em(5)
+      background-color: #38b69a
+
+#map
+  position: relative
+  width: 100%
+  height: em(387)
+  border: 2px solid $mainColor
+
+@media screen and (max-width: 767px)
+  .contacts
+    margin-bottom: 125px
+
+  .contacts__address
+    padding-left: 30px
+    padding-right: 30px
+    line-height: 1.2
+    font-size: em(16)

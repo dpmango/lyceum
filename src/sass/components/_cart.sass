@@ -1,0 +1,254 @@
+.cart
+  display: flex
+  flex-wrap: wrap
+  margin-top: em(47)
+  margin-bottom: em(88)
+
+.cart__user
+  font-size: em(14)
+  margin-bottom: em(4, 14)
+  margin-left: em(-1, 14)
+  flex-basis: 100%
+
+.cart-list
+  flex-basis: 68.4%
+
+.cart-item
+  margin-bottom: em(8)
+  padding: em(13) em(28) em(14) em(16)
+  border: em(2) solid $mainColor
+  &__image
+    float: left
+    width: em(152)
+    height: em(227)
+    margin-right: em(9)
+    img
+      width: 100%
+
+  &__title
+    margin-top: em(2, 14)
+    margin-bottom: em(7, 14)
+    font-size: em(14)
+
+  &__description
+    font-family: 'ApercuPro-Light', Arial, sans-serif
+    margin-top: em(10)
+    margin-bottom: em(9)
+    word-break: break-all
+    white-space: pre-wrap
+    line-height: em(22)
+    display: inline-block
+
+  &__code
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-size: em(12)
+    margin-bottom: em(15, 12)
+
+  &__count
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-size: em(12)
+
+  &__colors
+    margin-bottom: em(16)
+
+  &__sizes
+    margin-bottom: em(-3)
+
+  &__buttons
+    margin-top: em(-38)
+
+  &__btn
+    display: inline-block
+    margin-right: em(2)
+    padding: em(9) em(20)
+    width: em(170)
+    height: em(39)
+    border: em(2) solid $mainColor
+    box-sizing: border-box
+    color: #000
+    text-align: center
+    text-decoration: none
+    &:hover
+      border-color: #005480
+      background-color: #fff
+      text-decoration: none
+      color: #005480
+    &:last-child
+      margin-right: 0
+
+.cart-info
+  flex-basis: 30%
+  margin-left: em(10)
+
+  &__stock
+    padding: em(8) em(20) em(32) em(46)
+    border: em(2) solid $mainColor
+
+
+  &__application
+    margin-bottom: em(8)
+    padding: 0 em(31) em(2) em(42)
+    border: em(2) solid $mainColor
+
+  &__title
+    margin-bottom: em(19, 14)
+    font-size: em(14)
+    text-transform: uppercase
+    &--main
+      margin-bottom: em(21)
+      font-family: 'ApercuPro-Bold', Arial, sans-serif
+
+    &:nth-child(4)
+      margin-top: em(20, 14)
+      margin-bottom: 0
+
+    &:nth-child(5)
+      margin-top: em(8, 14)
+
+    &:nth-child(6)
+      margin-top: em(-10)
+      margin-bottom: 0
+
+    &:nth-child(7)
+      margin-top: em(11)
+
+  &__total
+    margin-bottom: em(34)
+
+  &__send
+    margin-bottom: em(21)
+
+  &__additional
+    margin-bottom: em(33)
+    line-height: em(15)
+
+  &__input
+    display: flex
+    flex-wrap: wrap
+
+  &__code
+    margin-right: em(9)
+    padding: em(3) em(30)
+    width: em(169)
+    height: em(39)
+    font-family: 'ApercuPro-Light', Arial, sans-serif
+    border: em(2) solid $mainColor
+    box-sizing: border-box
+    &::-webkit-input-placeholder
+      color: #000
+    &::-moz-placeholder
+      color: #000
+    &:-moz-placeholder
+      color: #000
+    &:-ms-input-placeholder
+      color: #000
+
+  &__code-add
+    margin-top: -1px
+    width: em(84)
+    height: em(39)
+    border: 2px solid transparent
+    background-color: #005480
+    box-sizing: border-box
+    color: #fff
+    transition: all ease .5s
+    &:hover
+      background-color: #fff
+      color: #000
+      border-color: #005480
+
+  &__total
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+
+  &__send
+    padding: em(10) em(20)
+    display: inline-block
+    width: em(262)
+    height: em(39)
+    border: 2px solid transparent
+    background-color: #005480
+    box-sizing: border-box
+    color: #fff
+    transition: all ease .5s
+    text-transform: uppercase
+    text-decoration: none
+    text-align: center
+    &:hover
+      background-color: #fff
+      color: #000
+      border-color: #005480
+
+  &__additional
+    text-align: center
+    text-transform: none
+    &:last-child
+      margin-bottom: em(33)
+
+.cart-info__stock
+  p
+    text-align: center
+
+  p:first-child
+    margin-bottom: 0
+
+  p:nth-child(2)
+    margin-top: em(8)
+    margin-bottom: em(15)
+
+  p:nth-child(3)
+    text-align: center
+
+  p:nth-child(4)
+    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    margin-top: em(-7)
+    margin-bottom: em(18)
+
+  p:last-child
+    margin-bottom: em(-6)
+    font-size: em(12)
+    line-height: em(21, 12)
+
+@media screen and (max-width: 1134px)
+  .cart-list
+    flex-basis: 100%
+
+  .cart-info
+    display: flex
+    margin-left: 0
+
+  .cart-info__application
+    padding: 15px 50px
+    margin-right: 30px
+
+  .cart-info__stock
+    padding: 15px 65px
+
+@media screen and (max-width: 660px)
+  .cart-info
+    flex-direction: column
+    flex-basis: 100%
+
+  .cart-info__application
+    flex-basis: 100%
+    margin-right: 0
+
+  .cart-info__stock
+    flex-basis: 100%
+
+  .cart-item__buttons
+    float: none
+    margin-top: 10px
+
+@media screen and (max-width: 600px)
+    .cart-item__image
+      margin: 20px auto
+      float: none
+
+@media screen and (max-width: 440px)
+  .cart-info__application
+    padding-left: 12px
+    padding-right: 12px
+
+  .cart-item__btn
+    width: 118px
+    margin-bottom: 10px
