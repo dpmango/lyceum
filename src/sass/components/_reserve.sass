@@ -32,11 +32,30 @@
       p
         line-height: 1.5
 
+  &__send
+    position: absolute
+    bottom: em(-19)
+    right: em(13)
+    width: em(261)
+    padding-left: 0
+    padding-right: 0
+    font-family: $apercuLight
+    text-align: center
+    cursor: pointer
+
+
   &__col
     flex-basis: 32.4%
     margin-right: em(13)
     &:last-child
       margin-right: 0
+
+@media screen and (max-width: 880px)
+  .reserve__send
+    left: 50%
+    transform: translateX(-50%)
+    right: auto
+
 
 @media screen and (max-width: 630px)
   .reserve__form
@@ -50,7 +69,7 @@
   .reserve__col
     flex-basis: 45%
 
-@media screen and (max-width: 460px)
+@media screen and (max-width: 500px)
   .reserve__col
     display: flex
     flex-direction: column
@@ -60,3 +79,7 @@
 
   .reserve__title::after
     display: none
+
+@media screen and (max-width: 400px)
+  .reserve__send
+    width: 200px

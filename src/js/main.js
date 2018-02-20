@@ -113,12 +113,15 @@ $(document).ready(function () {
         }
     }
 
-    /*$('.js-showSelectedImage').on('change', function () {
-        readURL(this);
-    });*/
-
     $('.js-photo-input').on('change', function () {
         readURL(this);
+    });
+
+    /* Open popup*/
+    $('.js-open-popup').magnificPopup({
+        type:'inline',
+        midClick: true,
+        mainClass: 'mfp-fade'
     });
 
 });

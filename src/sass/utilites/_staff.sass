@@ -328,3 +328,43 @@
   &::before
     width: em(4)
     height: em(28)
+
+
+/* overlay at start */
+.mfp-fade.mfp-bg
+  opacity: 0
+  transition: all 0.3s ease-out
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready
+  opacity: 0.8
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing
+  opacity: 0
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content
+  opacity: 0
+  transition: all 0.3s ease-out
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content
+  opacity: 1
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content
+  opacity: 0
+
+
+.white-popup
+  position: relative
+  background: $grey
+  padding: 110px 40px 25px
+  width: auto
+  max-width: 80%
+  margin: 20px auto
+
+
+@media screen and (max-width: 500px)
+  .white-popup
+    padding: 30px 30px 35px

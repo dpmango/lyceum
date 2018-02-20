@@ -141,7 +141,7 @@
                 <img src="img/360-bg.jpg" alt="Club360" class="club360__img">
                 <div class="participate-club">
                     <p class="participate-club__text">Клуб ЛИЦЕЙСТИЛЬ 360 - это виртуальное пространство для детей и родителей, актуальные новинки модной одежды для дошкольников, советы и уникальные статьи, приятные бонусы и подарки. Актуальные акции каждый месяц.  А так же интересные мероприятия в наших магазинах для детей и их родителей. Вступайте в КЛУБ и получите еще больше преимуществ. Всем зарегистрированным в программе скидка на всю коллекцию и посредственный бонус. </p>
-                    <a href="#" class="btn btn--green">Оформить заявку</a>
+                    <a href="#club360" class="btn btn--green js-open-popup">Оформить заявку</a>
                 </div>
             </section>
         </main>
@@ -190,6 +190,102 @@
             </div>
             <p class="footer__copyright">&copy; ООО "ЛицейСтиль" 2018<br>дизайн NoBrand</p>
         </footer>
+    </div>
+
+    <!-- Popup -->
+    <div id="club360" class="white-popup mfp-hide">
+        <div class="registration">
+            <h3 class="registration__title">Регистрация в клубе 360</h3>
+            <div class="registration__form">
+                <form action="#" type="POST">
+                    <div class="row">
+                                    <span class="registration__radio-button">
+                                        <input id="user-parent" data-type="parent" type="radio" name="type" value="parent" checked>
+                                        <label for="user-parent" class="registration__type js-registration-type">Я Родитель<span class="registration__radio"><span class="checkmark"></span></span></label>
+                                    </span>
+                        <span class="registration__radio-button">
+                                        <input id="user-scholar" data-type="scholar" type="radio" name="type" value="scholar">
+                                        <label for="user-scholar" class="registration__type js-registration-type">Я ученик<span class="registration__radio"><span class="checkmark"></span></span></label>
+                                    </span>
+                    </div>
+
+                    <div data-src="parent" class="registration__data is-open">
+                        <div class="registration__col">
+                            <input type="text" name="last-name" placeholder="Фамилия" required>
+                            <input type="text" name="first-name" placeholder="Имя" required>
+                            <input type="text" name="second-name" placeholder="Отчество">
+                            <input type="text" name="date" class="js-date" placeholder="Дата рождения">
+                            <input type="text" name="phone" class="js-phone" placeholder="Номер телефона">
+                            <input type="email" name="email" class="js-email" placeholder="E-mail" required>
+                            <select name="second-name" class="registration__select">
+                                <option value="mother">Я мама</option>
+                                <option value="father">Я папа</option>
+                            </select>
+                        </div>
+                        <div class="registration__col">
+                            <div class="js-add-more-fields">
+                                <select name="child" class="registration__select">
+                                    <option value="son">У меня сын</option>
+                                    <option value="daughter">У меня дочь</option>
+                                </select>
+                                <select name="children-age" class="registration__select">
+                                    <option value="8">8 лет</option>
+                                    <option value="9">9 лет</option>
+                                    <option value="10">10 лет</option>
+                                </select>
+                                <input type="text" name="child-name" placeholder="Имя ребенка">
+                            </div>
+                            <div class="registration__add-child">
+                                <span class="plus js-registration-plus" ></span>
+                                <p>Еще один ребенок</p>
+                            </div>
+                        </div>
+                        <div class="registration__col">
+                            <label for="photo-parent" class="registration__add-photo js-add-photo">
+                                <img src="#" alt="Photo" class="profile-photo js-showSelectedImage">
+                            </label>
+                            <input id="photo-parent" type="file" class="js-photo-input" />
+                        </div>
+                    </div>
+                    <div data-src="scholar" class="registration__data">
+                        <div class="registration__col">
+                            <input type="text" name="last-name" placeholder="Фамилия" required>
+                            <input type="text" name="first-name" placeholder="Имя" required>
+                            <input type="text" name="second-name" placeholder="Отчество" required>
+                            <input type="text" name="date" class="js-date" placeholder="Дата рождения">
+                            <input type="text" name="phone" class="js-phone" placeholder="Номер телефона">
+                            <input type="email" name="email" class="js-email" placeholder="E-mail" required>
+                            <select name="class" class="registration__select">
+                                <option value="" disabled selected>Класс</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                        <div class="registration__col">
+                            <input type="text" name="school" placeholder="Моя школа">
+                            <select name="interests" class="registration__select">
+                                <option value="" disabled selected>Интересы</option>
+                                <option value="football">Футбол</option>
+                                <option value="chess">Шахматы</option>
+                            </select>
+                            <div class="js-add-more-fields">
+                                <input type="text" name="interests-other" placeholder="Интересы">
+                            </div>
+                            <div class="registration__add-child">
+                                <span class="plus js-registration-plus"></span>
+                                <p>Добавить интерес</p>
+                            </div>
+                        </div>
+                        <div class="registration__col">
+                            <label for="photo-scholar" class="registration__add-photo"></label>
+                            <input id="photo-scholar" type="file"></input>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--green registration__send">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script src="js/libs.min.js"></script>

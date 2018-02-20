@@ -342,7 +342,7 @@
                     </div>
                 </div>
                 <div class="product-defer">
-                    <a href="#" class="product-defer__button">Отложить</a>
+                    <a href="#defer-popup" class="product-defer__button js-open-popup">Отложить</a>
                     <p>Вы можете отложить товар на срок 3 дня и померить его в одном из наших магазинов.<br>
                         *Если данный товар есть в наличии и не отложен другим покупателем</p>
                 </div>
@@ -445,6 +445,38 @@
             </div>
             <p class="footer__copyright">&copy; ООО "ЛицейСтиль" 2018<br>дизайн NoBrand</p>
         </footer>
+    </div>
+
+    <!-- Popup -->
+    <div id="defer-popup" class="white-popup mfp-hide">
+        <section class="reserve">
+            <h3 class="reserve__title">Зарезервировать товар</h3>
+            <div class="reserve__form">
+                <form action="#" type="POST">
+                    <div class="row">
+                        <div class="reserve__col">
+                            <input type="text" name="last-name" placeholder="Фамилия" required>
+                            <input type="text" name="first-name" placeholder="Имя" required>
+                        </div>
+                        <div class="reserve__col">
+                            <input type="text" name="phone" class="js-phone" placeholder="Номер телефона">
+                            <input type="email" name="email" class="js-email" placeholder="E-mail" required>
+                        </div>
+                        <div class="reserve__col">
+                            <select name="shop" class="registration__select">
+                                <option value="" selected disabled>Выберите магазин</option>
+                                <option value="first">Магазин 1</option>
+                                <option value="second">Магазин 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>Для заказа без регистрации просто отложить товар в магазине и выбор магазина,<br>отправить типа в ближайшее время менеджер свяжется с вами для уточнения заказа</p>
+                    </div>
+                    <button type="submit" class="btn btn--green reserve__send">Заказать</button>
+                </form>
+            </div>
+        </section>
     </div>
 
     <script src="js/libs.min.js"></script>
