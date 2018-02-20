@@ -1,0 +1,136 @@
+.archive-wrapper
+  position: relative
+  margin: em(-3) 0 em(152) em(36)
+
+.archive
+  padding-top: em(21)
+  padding-left: em(258)
+  background: url("../img/style-news.jpg") no-repeat em(62) em(18)
+  &__club360
+    display: block
+    margin-bottom: em(17, 12)
+    padding-top: 1px
+    font-family: $apercuBold
+    font-size: em(12)
+    text-decoration: none
+    color: #000
+    text-transform: uppercase
+    &:hover
+      color: #000
+      text-decoration: none
+    img
+      float: left
+      margin-right: em(15, 12)
+      max-width: em(131, 12)
+
+    h3
+      margin-top: em(39, 12)
+      line-height: 1.8
+      font-size: em(12, 12)
+
+  &__tags
+    display: flex
+    flex-wrap: wrap
+    max-width: em(360)
+    li
+      margin-right: em(5)
+      margin-bottom: em(10)
+      a
+        font-size: em(12)
+        text-transform: uppercase
+        text-decoration: none
+        color: #000
+
+  &__how-created
+    margin-top: em(245)
+    margin-left: em(50)
+
+
+  &-cube
+    top: 31%
+    left: em(-54)
+    transform: scale(0.94)
+
+.archive-sidebar
+  margin-top: em(60)
+  margin-left: em(18)
+
+  &__list
+    padding: em(16) em(21) em(1) em(17)
+    border: em(2) solid $mainColor
+    li
+      margin-bottom: em(16)
+      a
+        font-size:  em(12)
+        color: #000
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+  &__title
+    font-family: $apercuBold
+    font-size: em(12)
+    margin-left: em(19)
+    margin-top: em(15)
+
+
+
+@media screen and (max-width: 1040px)
+  .archive-filters
+    .filters__select
+      width: 150px
+      margin-bottom: 5px
+      &:last-child
+        margin-right: 0
+
+  .archive
+    padding-left: 0
+    background: none
+
+    &__how-created
+      margin-top: 35px
+      margin-left: auto
+      margin-right: auto
+
+@media screen and (max-width: 800px)
+  .archive-main-wrapper
+    flex-wrap: wrap
+
+  .archive-wrapper
+    margin-bottom: 30px
+
+  .archive-sidebar
+    margin-bottom: 130px
+
+  .archive-sidebar,
+  .archive-wrapper
+    float: none
+    flex-basis: 100%
+    margin-left: auto
+    margin-right: auto
+
+  .archive
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .archive-filters
+    justify-content: center
+
+  .archive__tags
+    max-width: 100%
+    justify-content: center
+
+  .archive__club360
+    width: 320px
+
+@media screen and (min-width: 450px) and (max-width: 800px)
+  .archive-sidebar
+    flex-basis: 60%
+
+
+@media screen and (max-width: 449px)
+  .archive__club360
+    width: 100%
+    h3
+      font-size: em(14)

@@ -9,7 +9,8 @@ $(document).ready(function () {
         $('nav').fadeOut();
     });
 
-    $('.slider').slick({
+    /* SLIDER */
+    $('.slider, .looks-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         adaptiveHeight: true,
@@ -19,13 +20,14 @@ $(document).ready(function () {
         autoplaySpeed: 4000
     });
 
+    /* VACANCIES SWITCHER */
     $('.js-vacancies').on('click', function () {
         $(this).find('.vacancies__description').slideToggle('slow');
         $(this).find('.vacancies__btn').fadeToggle('slow');
     });
 
 
-    /* Video popup */
+    /* VIDEO POPUP */
     _document.on('click', '.mfp-close', closeMfp);
 
     function closeMfp(){
@@ -63,22 +65,60 @@ $(document).ready(function () {
         closeMarkup: '<button class="mfp-close"><a href="" class="close-button"></a></button>'
     });
 
+    /* BEAUTIFUL SELECTS*/
     $('select').niceSelect();
 
-
+    /* LEFT SIDEBAR WITH CATEGORIES*/
     $('.js-show-categories').click(function(){
         $(this).toggleClass('open');
-
         $('.categories').toggleClass('open');
     });
 
-
-    /*$(window).bind('scroll',function(e){
-        parallaxScroll();
+    /* CONTACTS MAPS */
+    $('.js-map').on('click', function () {
+       $(this).toggleClass('contacts__address--open');
+       $(this).next('.contacts__map').slideToggle('slow');
     });
 
-    function parallaxScroll(){
-        var scrolled = $(window).scrollTop();
-        $('.cube:not(.footer .cube)').css('top',(0-(scrolled*.25))+'px');
-    }*/
+    /* CHANGE REGISTRATION TYPE*/
+    $('.js-registration-type').on('click', function () {
+       var type = $(this).prev('[data-type]').data('type');
+       $('.is-open[data-src]').toggleClass('is-open');
+       $("[data-src='" + type + "']").toggleClass('is-open');
+    });
+
+    /* ADD FIELDS FOR REGISTRATION */
+    $('.js-registration-plus').on('click', function () {
+       var column = $(this).closest('.registration__col');
+       var fields = $(column).find('.js-add-more-fields').html();
+       $(column).find('.js-add-more-fields').after(fields);
+    });
+
+    /* MASKS */
+    $('.js-date').mask("0.00.0000");
+    $('.js-phone').mask('+7(999) 999-9999');
+
+    // SHOW SELECTED IMAGE
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.js-showSelectedImage').attr('src', e.target.result);
+                $('.js-showSelectedImage').addClass('showing');
+                $('.js-add-photo').addClass('bgn');
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    /*$('.js-showSelectedImage').on('change', function () {
+        readURL(this);
+    });*/
+
+    $('.js-photo-input').on('change', function () {
+        readURL(this);
+    });
+
 });

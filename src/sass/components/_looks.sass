@@ -1,0 +1,47 @@
+.looks-wrapper
+  margin-top: em(-19)
+  margin-bottom: em(102)
+
+.looks-slider
+  .slider__arrow
+    &--prev
+      top: 50%
+      left: em(21)
+      transform: translateY(-50%) rotate(45deg)
+
+    &--next
+      top: 50%
+      right: em(21)
+      transform: translateY(-50%) rotate(-135deg)
+
+.looks-pack
+  &__title
+    margin-bottom: em(23, 72)
+    font-size: em(72)
+    text-align: right
+  &__item
+    position: relative
+
+    img
+      width: 100%
+
+    a
+      position: absolute
+      top: 50%
+      left: 50%
+      padding: em(13.5) em(82)
+      max-width: em(281)
+      transform: translate(-50%, -50%)
+
+@media screen and (max-width: 600px)
+  .looks-wrapper
+    margin-bottom: 150px
+
+  .looks-pack
+    &__title
+      font-size: 40px
+    &__item
+      a
+        padding-left: 20px
+        padding-right: 20px
+        font-size: em(13)

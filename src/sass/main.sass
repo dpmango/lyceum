@@ -23,6 +23,13 @@ $browser-context: 14 // Default
 @import "components/collections"
 @import "components/contacts"
 @import "components/cart"
+@import "components/cabinet"
+@import "components/registration"
+@import "components/reserve"
+@import "components/looks"
+@import "components/news"
+@import "components/article"
+@import "components/archive"
 @import "media"
 
 
@@ -48,8 +55,43 @@ h1, h2, h3, h4, h5, h6
 
 button
   padding: 0
+  border: none
 
 a:hover
   color: #28b6ae
-  transition: color ease-in-out .2s
   text-decoration: underline
+
+input[type=text], input[type=email]
+  margin-top: 0
+  margin-bottom: em(6)
+  padding: em(9.5) em(10)
+  display: block
+  max-width: em(330)
+  width: 100%
+  font-size: em(14)
+  box-sizing: border-box
+  border: em(2) solid $mainColor
+  background-color: $grey
+  transition: border .2s ease-in-out
+
+  &:hover, &:focus
+    border-color: $blue
+
+  &::-webkit-input-placeholder
+    font-size: em(14)
+    color: #000
+  &::-moz-placeholder
+    font-size: em(14)
+    color: #000
+  &:-moz-placeholder
+    font-size: em(14)
+    color: #000
+  &:-ms-input-placeholder
+    font-size: em(14)
+    color: #000
+
+.showing
+  display: block
+
+.bgn
+  background: none

@@ -1,19 +1,35 @@
 .contacts
   margin-top: em(50)
   margin-bottom: em(85)
+
+  &__item
+    cursor: pointer
+
   &__address
-    margin-bottom: em(4, 18)
+    margin-bottom: em(5, 18)
     padding: em(16, 18) em(97, 18)
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
     font-size: em(18)
     color: #fff
-    background-color: #125a88
-    
-    &--aqua
-      margin-top: em(5)
-      background-color: #38b69a
+    background-color: #38b69a
+    transition: background .6s ease
+    &:hover
+      background-color: #125a88
 
-#map
+    &--open
+      background-color: #125a88
+
+  &__map
+    display: none
+    &--open
+      display: block
+
+    &--open
+      display: block
+
+#map-pobeda,
+#map-lenin,
+#map-sibir
   position: relative
   width: 100%
   height: em(387)

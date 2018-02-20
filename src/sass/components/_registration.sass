@@ -1,0 +1,179 @@
+.registration
+  &__title
+    position: relative
+    margin-bottom: em(9, 18)
+    padding: em(16, 18) em(48, 18)
+    font-size: em(18)
+    text-transform: uppercase
+    background-color: #125a88
+    color: #fff
+    &::after
+      position: absolute
+      right: 0
+      bottom: em(9, 18)
+      content: ''
+      display: block
+      width: em(172, 18)
+      height: em(154, 18)
+      background: url("../img/club360-logo.png") no-repeat center center
+      background-size: contain
+
+  &__form
+    position: relative
+    padding: em(41) em(28) em(18) em(66)
+    border: em(2) solid $mainColor
+
+  &__type
+    display: flex
+    align-items: center
+    margin-right: em(45)
+    cursor: pointer
+
+  &__radio-button
+    input[type=radio]
+      display: none
+
+      &:checked + label .registration__radio
+        background: #25ae88
+        border-color: transparent
+        .checkmark::after
+          border-color: #fff
+
+    &:last-child label
+      margin-right: auto
+
+  &__radio
+    position: relative
+    display: inline-block
+    margin-left: em(5)
+    width: em(15)
+    height: em(15)
+    border-radius: 50%
+    border: em(1) solid #000
+    background-color: #fff
+    box-sizing: border-box
+    text-align: center
+    cursor: pointer
+
+    .checkmark
+      top: 50%
+      left: 50%
+      position: absolute
+      transform: translate(-55%, -50%)
+      &::after
+        border-color: #000
+
+  .row
+    margin-bottom: em(27)
+    padding-left: em(10)
+
+  &__data
+    display: none
+    &.is-open
+      display: flex
+
+  &__col
+    flex-basis: 33.333%
+
+  &__select
+    margin-top: 0
+    padding-left: em(10)
+    padding-right: em(10)
+    margin-bottom: em(6)
+    display: block
+    max-width: em(330)
+    font-size: em(14)
+    width: 100%
+    text-align: left !important
+    background-color: $grey
+
+    &:hover
+      border-color: $blue
+
+  &__add-child
+    padding-top: em(6)
+    text-align: center
+
+    p
+      margin-top: em(2)
+
+  &__add-photo
+    display: inline-block
+    width: em(233)
+    height: em(233)
+    background: url("../img/add-photo.png") no-repeat center center
+    background-size: contain
+    cursor: pointer
+
+    & + input[type=file]
+      display: none
+
+  &__col:first-child,
+  &__col:nth-child(2)
+    margin-right: em(20)
+
+  &__col:last-child
+    padding-top: em(23)
+    text-align: right
+
+  &__send
+    position: absolute
+    bottom: em(-19)
+    right: em(13)
+    width: em(261)
+    padding-left: 0
+    padding-right: 0
+    font-family: $apercuLight
+    text-align: center
+    cursor: pointer
+
+.profile-photo
+  display: none
+  width: em(235)
+  height: em(235)
+  border-radius: 50%
+
+
+@media screen and (max-width: 880px)
+  .registration__form
+    padding-bottom: 50px
+
+  .registration__data
+    flex-wrap: wrap
+
+  .registration__col
+    flex-basis: 45%
+
+  .registration__send
+    left: 50%
+    transform: translateX(-50%)
+    right: auto
+
+@media screen and (max-width: 767px)
+  .registration__form
+    padding-left: 30px
+    padding-right: 30px
+
+  .registration .row
+    justify-content: center
+    padding-left: 0
+
+@media screen and (max-width: 520px)
+  .registration__col,
+  .js-add-more-fields
+    display: flex
+    flex-direction: column
+    align-items: center
+    flex-basis: 100%
+    width: 100%
+    margin-right: 0 !important
+
+
+  .registration input,
+  .registration select
+    margin-left: auto
+    margin-right: auto
+
+@media screen and (max-width: 460px)
+  .registration__title::after
+    display: none

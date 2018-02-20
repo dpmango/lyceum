@@ -7,6 +7,19 @@
   display: flex
   flex-wrap: wrap
 
+.filters
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: em(13)
+  &__select
+    margin-right: em(10)
+
+    &--age
+      padding-right: em(41)
+
+    &--other
+      padding-right: em(56)
+
 .product-card
   margin: em(-3) 0 em(94) em(37)
 
@@ -21,20 +34,6 @@
     padding-left: em(29)
     flex-basis: 40%
     flex-shrink: 1
-
-  &__filters
-    display: flex
-    flex-wrap: wrap
-    margin-bottom: em(13)
-
-  &__select
-    margin-right: em(10)
-
-    &--age
-      padding-right: em(41)
-
-    &--other
-      padding-right: em(56)
 
   &__cube
     &--blue
@@ -66,22 +65,22 @@
   &__description
     margin-top: em(10)
     margin-bottom: em(17)
-    font-family: 'ApercuPro-Light', Arial, sans-serif
+    font-family: $apercuLight
     word-break: break-all
     white-space: pre-wrap
     line-height: em(22)
 
   &__code
     margin-bottom: em(30, 12)
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
     font-size: em(12)
 
   &__count
     margin-bottom: em(31, 12)
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
     font-size: em(12)
     span
-      font-family: 'ApercuPro-Light', Arial, sans-serif
+      font-family: $apercuLight
 
 
 
@@ -99,10 +98,20 @@
     &:last-child
       margin-right: 0
 
+    label
+      cursor: pointer
+      transition: border .5s ease
+
+    input[type="radio"]
+      display: none
+
+    input[type="radio"]:checked~label
+      border: 2px solid #802511
+
   &__title
     width: auto
     height: auto
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
     font-size: em(12)
     margin-right: em(9, 12)
 
@@ -143,12 +152,24 @@
     border: em(2) solid $mainColor
     text-align: center
 
+    label
+      cursor: pointer
+      transition: background .5s ease
+
+
+    input[type="radio"]
+      display: none
+
+    input[type="radio"]:checked~label
+      background-color: #787f80
+
+
   &__size
     display: block
     padding-top: em(4)
     width: 100%
     height: 100%
-    font-family: 'ApercuPro-Light', Arial, sans-serif
+    font-family: $apercuLight
     text-decoration: none
     color: #000
     box-sizing: border-box
@@ -157,11 +178,11 @@
 .product-structure
   margin-bottom: em(21)
   &__title
-    font-family: 'ApercuPro-Bold', Arial, sans-serif !important
+    font-family: $apercuBold !important
     font-size: em(12)
 
   &__item
-    font-family: 'ApercuPro-Light', Arial, sans-serif
+    font-family: $apercuLight
     font-size: em(12)
     line-height: em(20, 12)
 
@@ -202,7 +223,7 @@
     display: inline-block
     margin-top: 0
     text-align: left
-    font-family: 'ApercuPro-Light', Arial, sans-serif
+    font-family: $apercuLight
     line-height: em(23)
 
 .similar
@@ -327,15 +348,16 @@
     margin-bottom: 100px
 
 @media screen and (max-width: 800px)
-  .product-card
-    margin-left: 0
-
+  .filters
     &__select
       margin-bottom: 5px
       width: 150px
+      &:last-child
+        margin-right: 0
 
-    &__filters
-      justify-content: center
+
+  .filters
+    justify-content: center
 
   .categories-show
     display: block
@@ -344,6 +366,10 @@
 
   .categories__cube
     display: none
+
+@media screen and (max-width: 767px)
+  .product-card
+    margin-left: 0
 
 @media screen and (max-width: 575px)
   .product-card-wrapper
@@ -356,3 +382,12 @@
   .product-card__info
     flex-basis: 100%
     padding-top: 30px
+
+@media screen and (max-width: 550px)
+  .filters
+    &__select
+      margin-right: 0
+      margin-left: 0
+      padding-left: 30px
+      flex-basis: 80%
+      text-align: left !important

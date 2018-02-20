@@ -42,7 +42,8 @@ gulp.task('scripts', function () {
 		'src/libs/jquery/dist/jquery.min.js',
 		'src/libs/slick-carousel/slick/slick.min.js',
         'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-        'src/libs/jquery-nice-select/js/jquery.nice-select.min.js'
+        'src/libs/jquery-nice-select/js/jquery.nice-select.min.js',
+        'src/libs/jquery-mask-plugin/dist/jquery.mask.min.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())

@@ -138,20 +138,39 @@
 
         <!-- MAIN -->
         <main class="main">
-            <section class="contacts">
-                <div class="contacts__item">
-                    <p class="contacts__address js-map contacts__address--open">г.Воронеж, ул.б-р Победы, 23Б, ТРК "АРЕНА" - 3й этаж, тел.202-85-60</p>
-                    <div id="map-pobeda" class="contacts__map contacts__map--open"></div>
-                </div>
-                <div class="contacts__item">
-                    <p class="contacts__address js-map">г.Воронеж, Ленинский проспект, 174П, ТРЦ "МАКСИМИР" - 2й этаж, тел.202-85-50</p>
-                    <div id="map-lenin" class="contacts__map"></div>
-                </div>
-                <div class="contacts__item">
-                    <p class="contacts__address js-map">г.Воронеж, ул Героев Сибиряков, 33. тел. 202-04-52</p>
-                    <div id="map-sibir" class="contacts__map"></div>
-                </div>
-            </section>
+            <h3 class="cabinet-user">Здравствуйте, Мария</h3>
+            <div class="cabinet-wrapper">
+               <div class="cabinet">
+                   <div class="cabinet__info">
+                       <h3 class="cabinet__participant">Участник клуба 360</h3>
+                       <img src="img/profile-photo.png" alt="Profile" class="cabinet__photo">
+                       <h3 class="cabinet__username">Иванова Марина Сергеевна</h3>
+                       <p class="cabinet__age">21.06.1988</p>
+                       <p class="cabinet__children">Мама Кирилла (9 лет) и Ксении (15 лет)</p>
+                       <ul class="cabinet__social">
+                           <li>
+                               <a href="#">Instagram</a>
+                           </li>
+                           <li>
+                               <a href="#">Vkontakte</a>
+                           </li>
+                       </ul>
+                       <div style="clear:both;"></div>
+                       <button class="cabinet__change pull-right">Изменить</button>
+                       <div style="clear:both;"></div>
+                   </div>
+                   <div class="cabinet__promo promo">
+                       <p class="promo__title">Ваш личный промокод</p>
+                       <p class="promo__code">XD10UIN-HJDBM</p>
+                       <p class="promo__desc">Промокод дает право на получение скидки в размере 10% от стоимости<br>товаров. Сумеруюется с другими акциями и предложениями.</p>
+                   </div>
+               </div>
+               <div class="cabinet-banner">
+                   <a href="#">
+                       <img src="img/banner.jpg" alt="Banner">
+                   </a>
+               </div>
+            </div>
         </main>
 
         <!-- FOOTER -->
@@ -202,38 +221,6 @@
 
     <script src="js/libs.min.js" type="text/javascript"></script>
     <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var mapPobeda;
-            var mapLenin;
-            var mapSibir;
-
-            ymaps.ready(init);
-            function init(){
-                mapPobeda = new ymaps.Map ("map-pobeda", {
-                    center: [
-                        51.710867, 39.159638
-                    ],
-                    zoom: 16
-                });
-                mapLenin = new ymaps.Map ("map-lenin", {
-                    center: [
-                        51.697198, 39.272664
-                    ],
-                    zoom: 16
-                });
-                mapSibir = new ymaps.Map ("map-sibir", {
-                    center: [
-                        51.649622, 39.137926
-                    ],
-                    zoom: 16
-                });
-                mapPobeda.behaviors.enable('scrollZoom');
-                mapLenin.behaviors.enable('scrollZoom');
-                mapSibir.behaviors.enable('scrollZoom');
-            }
-        });
-    </script>
     <script src="js/main.js"></script>
 
 </body>

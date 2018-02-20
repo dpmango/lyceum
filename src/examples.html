@@ -137,19 +137,140 @@
         </header>
 
         <!-- MAIN -->
-        <main class="main">
-            <section class="contacts">
-                <div class="contacts__item">
-                    <p class="contacts__address js-map contacts__address--open">г.Воронеж, ул.б-р Победы, 23Б, ТРК "АРЕНА" - 3й этаж, тел.202-85-60</p>
-                    <div id="map-pobeda" class="contacts__map contacts__map--open"></div>
+        <!-- Значения артрибута style не нужно, оно добавлено для демонстрационных целей -->
+        <main class="main" style="margin-top: 100px; margin-bottom: 300px">
+            <section class="examples">
+                <div class="row">
+                    <a href="#" class="btn btn--green" style="margin-right: 20px">Оформить заявку</a>
+                    <a href="#" class="btn btn--blue">Оформить заявку</a>
                 </div>
-                <div class="contacts__item">
-                    <p class="contacts__address js-map">г.Воронеж, Ленинский проспект, 174П, ТРЦ "МАКСИМИР" - 2й этаж, тел.202-85-50</p>
-                    <div id="map-lenin" class="contacts__map"></div>
+                <div class="row" style="margin-top: 15px;">
+                    <a href="#" class="btn btn--grey">Подписаться</a>
                 </div>
-                <div class="contacts__item">
-                    <p class="contacts__address js-map">г.Воронеж, ул Героев Сибиряков, 33. тел. 202-04-52</p>
-                    <div id="map-sibir" class="contacts__map"></div>
+
+                <div style="margin-top: 15px;">
+                    <div class="registration">
+                        <h3 class="registration__title">Регистрация в клубе 360</h3>
+                        <div class="registration__form">
+                            <form action="#" type="POST">
+                                <div class="row">
+                                    <span class="registration__radio-button">
+                                        <input id="user-parent" data-type="parent" type="radio" name="type" value="parent" checked>
+                                        <label for="user-parent" class="registration__type js-registration-type">Я Родитель<span class="registration__radio"><span class="checkmark"></span></span></label>
+                                    </span>
+                                    <span class="registration__radio-button">
+                                        <input id="user-scholar" data-type="scholar" type="radio" name="type" value="scholar">
+                                        <label for="user-scholar" class="registration__type js-registration-type">Я ученик<span class="registration__radio"><span class="checkmark"></span></span></label>
+                                    </span>
+                                </div>
+
+                                <div data-src="parent" class="registration__data is-open">
+                                    <div class="registration__col">
+                                        <input type="text" name="last-name" placeholder="Фамилия" required>
+                                        <input type="text" name="first-name" placeholder="Имя" required>
+                                        <input type="text" name="second-name" placeholder="Отчество">
+                                        <input type="text" name="date" class="js-date" placeholder="Дата рождения">
+                                        <input type="text" name="phone" class="js-phone" placeholder="Номер телефона">
+                                        <input type="email" name="email" class="js-email" placeholder="E-mail" required>
+                                        <select name="second-name" class="registration__select">
+                                            <option value="mother">Я мама</option>
+                                            <option value="father">Я папа</option>
+                                        </select>
+                                    </div>
+                                    <div class="registration__col">
+                                        <div class="js-add-more-fields">
+                                            <select name="child" class="registration__select">
+                                                <option value="son">У меня сын</option>
+                                                <option value="daughter">У меня дочь</option>
+                                            </select>
+                                            <select name="children-age" class="registration__select">
+                                                <option value="8">8 лет</option>
+                                                <option value="9">9 лет</option>
+                                                <option value="10">10 лет</option>
+                                            </select>
+                                            <input type="text" name="child-name" placeholder="Имя ребенка">
+                                        </div>
+                                        <div class="registration__add-child">
+                                            <span class="plus js-registration-plus" ></span>
+                                            <p>Еще один ребенок</p>
+                                        </div>
+                                    </div>
+                                    <div class="registration__col">
+                                        <label for="photo-parent" class="registration__add-photo js-add-photo">
+                                            <img src="#" alt="Photo" class="profile-photo js-showSelectedImage">
+                                        </label>
+                                        <input id="photo-parent" type="file" class="js-photo-input" />
+                                    </div>
+                                </div>
+                                <div data-src="scholar" class="registration__data">
+                                    <div class="registration__col">
+                                        <input type="text" name="last-name" placeholder="Фамилия" required>
+                                        <input type="text" name="first-name" placeholder="Имя" required>
+                                        <input type="text" name="second-name" placeholder="Отчество" required>
+                                        <input type="text" name="date" class="js-date" placeholder="Дата рождения">
+                                        <input type="text" name="phone" class="js-phone" placeholder="Номер телефона">
+                                        <input type="email" name="email" class="js-email" placeholder="E-mail" required>
+                                        <select name="class" class="registration__select">
+                                            <option value="" disabled selected>Класс</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                        </select>
+                                    </div>
+                                    <div class="registration__col">
+                                        <input type="text" name="school" placeholder="Моя школа">
+                                        <select name="interests" class="registration__select">
+                                            <option value="" disabled selected>Интересы</option>
+                                            <option value="football">Футбол</option>
+                                            <option value="chess">Шахматы</option>
+                                        </select>
+                                        <div class="js-add-more-fields">
+                                            <input type="text" name="interests-other" placeholder="Интересы">
+                                        </div>
+                                        <div class="registration__add-child">
+                                            <span class="plus js-registration-plus"></span>
+                                            <p>Добавить интерес</p>
+                                        </div>
+                                    </div>
+                                    <div class="registration__col">
+                                        <label for="photo-scholar" class="registration__add-photo"></label>
+                                        <input id="photo-scholar" type="file"></input>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn--green registration__send">Зарегистрироваться</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 150px;">
+                    <section class="reserve">
+                        <h3 class="reserve__title">Зарезервировать товар</h3>
+                        <div class="reserve__form">
+                            <form action="#" type="POST">
+                                <div class="row">
+                                    <div class="reserve__col">
+                                        <input type="text" name="last-name" placeholder="Фамилия" required>
+                                        <input type="text" name="first-name" placeholder="Имя" required>
+                                    </div>
+                                    <div class="reserve__col">
+                                        <input type="text" name="phone" class="js-phone" placeholder="Номер телефона">
+                                        <input type="email" name="email" class="js-email" placeholder="E-mail" required>
+                                    </div>
+                                    <div class="reserve__col">
+                                        <select name="shop" class="registration__select">
+                                            <option value="" selected disabled>Выберите магазин</option>
+                                            <option value="first">Магазин 1</option>
+                                            <option value="second">Магазин 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <p>Для заказа без регистрации просто отложить товар в магазине и выбор магазина,<br>отправить типа в ближайшее время менеджер свяжется с вами для уточнения заказа</p>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
                 </div>
             </section>
         </main>
@@ -190,7 +311,7 @@
                 <div class="subscribe footer__subscribe">
                     <h3 class="subscribe__title">Подписаться на новостную рассылку</h3>
                     <p class="subscribe__text">Зарегистрируйтесь сейчас и получите скидку 25%<br>на один товар в фирменном магазине ЛицейСтиль.<br>И стать участником клуба ЛицейСтиль 360.</p>
-                    <a href="#" class="btn btn--grey">Подписаться</a>
+                    <a href="#" class="btn btn--grey subscribe__btn">Подписаться</a>
                 </div>
 
                 <span class="cube cube--white-left footer__cube--white"></span>
@@ -202,38 +323,6 @@
 
     <script src="js/libs.min.js" type="text/javascript"></script>
     <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var mapPobeda;
-            var mapLenin;
-            var mapSibir;
-
-            ymaps.ready(init);
-            function init(){
-                mapPobeda = new ymaps.Map ("map-pobeda", {
-                    center: [
-                        51.710867, 39.159638
-                    ],
-                    zoom: 16
-                });
-                mapLenin = new ymaps.Map ("map-lenin", {
-                    center: [
-                        51.697198, 39.272664
-                    ],
-                    zoom: 16
-                });
-                mapSibir = new ymaps.Map ("map-sibir", {
-                    center: [
-                        51.649622, 39.137926
-                    ],
-                    zoom: 16
-                });
-                mapPobeda.behaviors.enable('scrollZoom');
-                mapLenin.behaviors.enable('scrollZoom');
-                mapSibir.behaviors.enable('scrollZoom');
-            }
-        });
-    </script>
     <script src="js/main.js"></script>
 
 </body>

@@ -1,0 +1,90 @@
+.article-wrapper
+  margin-top: em(111)
+  margin-bottom: em(129)
+
+.article
+  padding: em(15) em(22) em(13) em(29)
+  background-color: #fff
+
+  h2
+    margin-top: 0
+    margin-bottom: em(12, 48)
+    font-size: em(48)
+    text-transform: uppercase
+
+
+  .main-photo
+    position: relative
+    float: left
+    display: inline-block
+    max-width: em(559)
+    max-height: em(448)
+    margin: em(86) em(51) em(100) em(-29)
+    z-index: 5
+    &::after
+      content: ''
+      position: absolute
+      width: 60.1%
+      height: 116%
+      border: 2px solid #000
+      top: -37px
+      left: 30px
+      z-index: -1
+
+    img
+      width: 100%
+
+    figcaption
+      margin-left: em(49)
+      margin-top: em(12)
+      margin-bottom: em(12)
+      font-family: $apercuBold
+      z-index: -1
+
+
+  p
+    margin-bottom: em(27)
+    line-height: em(17)
+
+  p:first-of-type
+    margin-top: -5px
+
+  p.row
+    align-items: flex-start
+    justify-content: space-around
+    margin-bottom: em(21)
+
+@media screen and (max-width: 900px)
+  .article
+    padding-left: 20px
+    padding-right: 20px
+    .main-photo
+      float: none
+      margin-bottom: 70px
+      margin-left: 0
+
+
+@media screen and (max-width: 566px)
+  .article-wrapper
+    margin-top: 30px
+
+  .article
+    .main-photo
+      margin: 20px 0
+
+      figcaption
+        margin-left: 0
+
+      &::after
+        display: none
+
+    h2
+      font-size: 30px
+
+    p.row
+      padding-left: 10px
+      padding-right: 10px
+
+      img
+        width: 100%
+        margin-bottom: 30px

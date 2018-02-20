@@ -1,0 +1,134 @@
+.cabinet-wrapper
+  display: flex
+  margin-bottom: em(91)
+
+.cabinet-user
+  margin-top: em(65)
+  font-size: em(14)
+  margin-bottom: em(6)
+
+.cabinet
+  margin-right: em(12)
+  flex-basis: 69%
+
+  &__username
+    margin-top: em(39)
+    margin-bottom: em(8)
+    font-size: em(14)
+
+  &__info
+    margin-bottom: em(7)
+    padding: em(5) em(27) em(20) em(9)
+    border: 2px solid $mainColor
+
+    p
+      margin-top: 0
+      font-family: $apercuBold
+
+  &__participant
+    font-size: em(16)
+    text-align: right
+    text-transform: uppercase
+
+  &__photo
+    float: left
+    max-width: em(157)
+    max-height: em(157)
+    margin-right: em(11)
+    border-radius: 50%
+
+  &__age
+    margin-bottom: em(9)
+    font-family: $apercuLight !important
+
+  &__children
+    margin-bottom: em(4)
+
+  &__social
+    li
+      float: left
+      margin-right: em(18)
+      &:last-child
+        margin-right: 0
+      a
+        font-family: $apercuBold
+        font-size: em(12)
+        color: $mainColor
+        &:hover
+          color: $blue
+
+  &__change
+    margin-top: em(-17)
+    padding: em(10) em(52)
+    border: em(2) solid $mainColor
+    background-color: $grey
+    cursor: pointer
+    transition: background .5s ease
+    &:hover
+      background-color: #c6c6c6
+
+
+
+
+.promo
+  padding: 0 em(57) 0 em(47)
+  border: em(2) solid $mainColor
+  background: url("../img/club360-logo.png") no-repeat 99.4% 52px
+
+  &__title
+    margin-top: em(42)
+    margin-bottom: em(11)
+    text-transform: uppercase
+
+  &__code
+    margin-top: 0
+    margin-bottom: 0
+    padding: em(41, 47.74) 0
+    font-size: em(47.74)
+    border: em(2, 47.74) solid $mainColor
+    text-align: center
+
+  &__desc
+    margin-top: em(10)
+    margin-bottom: em(15)
+    line-height: 1.1
+
+.cabinet-banner
+  max-width: em(338)
+  max-height: em(524)
+  a
+    display: block
+
+@media screen and (max-width: 1000px)
+  .cabinet-wrapper
+    margin-bottom: 130px
+
+@media screen and (max-width: 767px)
+  .cabinet-banner
+    display: none
+
+  .cabinet
+    flex-basis: 100%
+    margin-right: 0
+
+@media screen and (max-width: 440px)
+  .cabinet__info
+    padding-left: 20px
+    padding-right: 20px
+
+  .cabinet__photo
+    float: none
+    display: block
+    margin-right: auto
+    margin-left: auto
+
+  .cabinet__change
+    float: none
+    margin-top: 20px
+
+  .cabinet__participant
+    text-align: center
+
+  .promo
+    padding-left: 20px
+    padding-right: 20px

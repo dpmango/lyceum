@@ -136,8 +136,8 @@
             <span class="cube cube--white-left header__cube--white"></span>
         </header>
 
-
         <div class="wrapper product-wrapper">
+            <!-- LEFT SIDEBAR -->
             <aside class="categories pull-left categories--product-card">
                 <ul class="categories__list">
                     <li class="categories__item categories__item--title">
@@ -242,18 +242,18 @@
 
             <!-- MAIN -->
             <main class="main product-card pull-left">
-                <div class="product-card__filters">
-                    <select name="collection" class="product-card__select">
+                <div class="filters">
+                    <select name="collection" class="filters__select">
                         <option value="girls">Girl's collections</option>
                         <option value="boys">Boy's collections</option>
                     </select>
-                    <select name="age" class="product-card__select product-card__select--age">
+                    <select name="age" class="filters__select filters__select--age">
                         <option value="all">Все возраста</option>
                         <option value="10">10</option>
                         <option value="12">12</option>
                         <option value="15">15</option>
                     </select>
-                    <select name="other" class="product-card__select product-card__select--other">
+                    <select name="other" class="filters__select filters__select--other">
                         <option value="news">Новинки</option>
                         <option value="some-1">Не новинки</option>
                         <option value="some-2">Что-то ещё</option>
@@ -270,45 +270,58 @@
                         <ul class="product-colors">
                             <li class="product-colors__item product-colors__title">Цвет:</li>
                             <li class="product-colors__item">
-                                <a href="#" class="product-colors__color product-colors__color--black"></a>
+                                <input id="colors-black" type="radio" name="colors" value="black">
+                                <label for="colors-black" class="product-colors__color product-colors__color--black"></label>
                             </li>
                             <li class="product-colors__item">
-                                <a href="#" class="product-colors__color product-colors__color--blue"></a>
+                                <input id="colors-blue" type="radio" name="colors" value="blue">
+                                <label for="colors-blue" class="product-colors__color product-colors__color--blue"></label>
                             </li>
                             <li class="product-colors__item">
-                                <a href="#" class="product-colors__color product-colors__color--white"></a>
+                                <input id="colors-white" type="radio" name="colors" value="white">
+                                <label for="colors-white" class="product-colors__color product-colors__color--white"></label>
                             </li>
                             <li class="product-colors__item">
-                                <a href="#" class="product-colors__color product-colors__color--purple"></a>
+                                <input id="colors-purple" type="radio" name="colors" value="purple">
+                                <label for="colors-purple" class="product-colors__color product-colors__color--purple"></label>
                             </li>
                             <li class="product-colors__item">
-                                <a href="#" class="product-colors__color product-colors__color--grey"></a>
+                                <input id="colors-grey" type="radio" name="colors" value="grey">
+                                <label for="colors-grey" class="product-colors__color product-colors__color--grey"></label>
                             </li>
                         </ul>
                         <ul class="product-sizes">
                             <li class="product-sizes__item">
-                                <a href="#" class="product-sizes__size">42</a>
+                                <input id="size-42" type="radio" name="size" value="42">
+                                <label for="size-42" class="product-sizes__size">42</label>
                             </li>
                             <li class="product-sizes__item">
-                                <a href="#" class="product-sizes__size">44</a>
+                                <input id="size-44" type="radio" name="size" value="44">
+                                <label for="size-44" class="product-sizes__size">44</label>
                             </li>
                             <li class="product-sizes__item">
-                                <a href="#" class="product-sizes__size">46</a>
+                                <input id="size-46" type="radio" name="size" value="46">
+                                <label for="size-46" class="product-sizes__size">46</label>
                             </li>
                             <li class="product-sizes__item">
-                                <a href="#" class="product-sizes__size">48</a>
+                                <input id="size-48" type="radio" name="size" value="48">
+                                <label for="size-48" class="product-sizes__size">48</label>
                             </li>
                             <li class="product-sizes__item">
-                                <a href="#" class="product-sizes__size">50</a>
+                                <input id="size-50" type="radio" name="size" value="50">
+                                <label for="size-50" class="product-sizes__size">50</label>
                             </li>
                             <li class="product-sizes__item">
-                                <a href="#" class="product-sizes__size">52</a>
+                                <input id="size-52" type="radio" name="size" value="52">
+                                <label for="size-52" class="product-sizes__size">52</label>
                             </li>
                             <li class="product-sizes__item">
-                                <a href="#" class="product-sizes__size">54</a>
+                                <input id="size-54" type="radio" name="size" value="54">
+                                <label for="size-54" class="product-sizes__size">54</label>
                             </li>
                             <li class="product-sizes__item">
-                                <a href="#" class="product-sizes__size">56</a>
+                                <input id="size-56" type="radio" name="size" value="56">
+                                <label for="size-56" class="product-sizes__size">56</label>
                             </li>
                         </ul>
                         <p class="product-info__description">Классический трикотажный жакет на пуговицах,<br>приталенный силуэт, белая окантовка, V-образный вырез.</p>
@@ -376,6 +389,8 @@
                     <span class="cube cube--aqua-left similar__cube--aqua-left"></span>
                 </div>
             </main>
+
+            <!-- SIDEBAR BURGER -->
             <span class="categories-show js-show-categories">
                 <span></span>
                 <span></span>
@@ -422,7 +437,7 @@
                 <div class="subscribe footer__subscribe">
                     <h3 class="subscribe__title">Подписаться на новостную рассылку</h3>
                     <p class="subscribe__text">Зарегистрируйтесь сейчас и получите скидку 25%<br>на один товар в фирменном магазине ЛицейСтиль.<br>И стать участником клуба ЛицейСтиль 360.</p>
-                    <a href="#" class="subscribe__btn">Подписаться</a>
+                    <a href="#" class="btn btn--grey">Подписаться</a>
                 </div>
 
                 <span class="cube cube--white-left footer__cube--white"></span>

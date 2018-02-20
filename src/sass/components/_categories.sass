@@ -13,7 +13,7 @@
 
   &__item
     margin-bottom: em(8, 12)
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
     font-size: em(12)
     &:last-child
       margin-bottom: 0
@@ -25,7 +25,7 @@
     &--collection
       text-transform: none
       span
-        font-family: 'ApercuPro-Light', Arial, sans-serif
+        font-family: $apercuLight
 
   &__link
     color: $mainColor
@@ -37,7 +37,7 @@
     z-index: 100
 
 /* Adaptive */
-@media screen and (max-width: 767px)
+@media screen and (max-width: 800px)
   body
     position: relative
 

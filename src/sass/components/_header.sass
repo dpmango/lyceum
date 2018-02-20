@@ -24,7 +24,7 @@
   &__menu-button
     background-color: transparent
     border: 0
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
     font-size: em(37)
     line-height: em(53, 37)
     text-transform: uppercase
@@ -90,7 +90,7 @@
     margin-bottom: em(34)
 
   &__first-word
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
 
   &__link
     color: $mainColor
@@ -108,7 +108,7 @@
 
     &--header
       margin-bottom: em(24, 43)
-      font-family: 'ApercuPro-Bold', Arial, sans-serif
+      font-family: $apercuBold
       font-size: em(43)
       text-transform: uppercase
 
@@ -153,7 +153,7 @@
     display: inline-block
     margin-top: em(3)
     margin-left: em(5)
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
     color: #125a88
     text-decoration: none
 
@@ -210,6 +210,10 @@
   .header__news
     flex-basis: 100%
     max-width: 100% !important
+
+@media screen and (max-width: 414px)
+  .header-sub
+    align-items: flex-start !important
 
 @media screen and (max-width: 404px)
   .header__logo

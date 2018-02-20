@@ -31,7 +31,7 @@
     font-size: em(14)
 
   &__description
-    font-family: 'ApercuPro-Light', Arial, sans-serif
+    font-family: $apercuLight
     margin-top: em(10)
     margin-bottom: em(9)
     word-break: break-all
@@ -40,12 +40,12 @@
     display: inline-block
 
   &__code
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
     font-size: em(12)
     margin-bottom: em(15, 12)
 
   &__count
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
     font-size: em(12)
 
   &__colors
@@ -58,21 +58,10 @@
     margin-top: em(-38)
 
   &__btn
-    display: inline-block
     margin-right: em(2)
-    padding: em(9) em(20)
     width: em(170)
     height: em(39)
-    border: em(2) solid $mainColor
     box-sizing: border-box
-    color: #000
-    text-align: center
-    text-decoration: none
-    &:hover
-      border-color: #005480
-      background-color: #fff
-      text-decoration: none
-      color: #005480
     &:last-child
       margin-right: 0
 
@@ -96,7 +85,7 @@
     text-transform: uppercase
     &--main
       margin-bottom: em(21)
-      font-family: 'ApercuPro-Bold', Arial, sans-serif
+      font-family: $apercuBold
 
     &:nth-child(4)
       margin-top: em(20, 14)
@@ -131,7 +120,7 @@
     padding: em(3) em(30)
     width: em(169)
     height: em(39)
-    font-family: 'ApercuPro-Light', Arial, sans-serif
+    font-family: $apercuLight
     border: em(2) solid $mainColor
     box-sizing: border-box
     &::-webkit-input-placeholder
@@ -151,14 +140,17 @@
     background-color: #005480
     box-sizing: border-box
     color: #fff
-    transition: all ease .5s
+    transition: background ease .4s
+    cursor: pointer
     &:hover
-      background-color: #fff
-      color: #000
-      border-color: #005480
+      background-color: #2579bf
+      text-decoration: none
+      color: #fff
+    &:active
+      background-color: #006889
 
   &__total
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
 
   &__send
     padding: em(10) em(20)
@@ -166,17 +158,19 @@
     width: em(262)
     height: em(39)
     border: 2px solid transparent
-    background-color: #005480
     box-sizing: border-box
     color: #fff
-    transition: all ease .5s
     text-transform: uppercase
-    text-decoration: none
     text-align: center
+    background-color: #125a88
+    transition: background ease .4s
+    text-decoration: none
     &:hover
-      background-color: #fff
-      color: #000
-      border-color: #005480
+      background-color: #2579bf
+      text-decoration: none
+      color: #fff
+    &:active
+      background-color: #006889
 
   &__additional
     text-align: center
@@ -199,7 +193,7 @@
     text-align: center
 
   p:nth-child(4)
-    font-family: 'ApercuPro-Bold', Arial, sans-serif
+    font-family: $apercuBold
     margin-top: em(-7)
     margin-bottom: em(18)
 

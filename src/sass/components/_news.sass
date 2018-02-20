@@ -1,0 +1,89 @@
+.news
+  margin-top: em(47)
+  margin-bottom:  em(125)
+
+  &__item
+    position: relative
+    margin: 0 em(64) em(22) em(70)
+
+  &__title
+    margin-bottom: em(2, 18)
+    padding: em(16, 18) em(48, 18) em(16, 18) em(26, 18)
+    font-size: em(18)
+    text-transform: uppercase
+    background-color: #125a88
+    color: #fff
+
+  &__info
+    padding: em(7) em(25)
+    min-height: em(139)
+    border: em(2) solid $mainColor
+    box-sizing: border-box
+
+    p
+      display: inline-block
+      margin-top: 7px
+      line-height: 1.2
+
+      &:first-child
+        margin-top: em(14)
+        margin-bottom: 0
+        font-family: $apercuBold
+
+    &--two-column
+      display: flex
+
+      .news__text
+        flex-basis: 70%
+
+        p:last-child
+          margin-bottom: em(6)
+
+      .news__social
+        flex-basis: 30%
+        text-align: center
+        img
+          margin-left: em(21)
+          max-width: em(130)
+          max-height: em(130)
+
+
+  &__club360
+    width: em(112)
+
+  &__action
+    position: absolute
+    bottom: em(-16)
+    right: em(26)
+    width: em(261)
+    text-align: center
+    padding-left: 0
+    padding-right: 0
+
+@media screen and (max-width: 1170px)
+  .news__info
+    padding-bottom: 30px
+
+  .news__social
+    align-self: center
+
+@media screen and (max-width: 767px)
+  .news__item
+    margin-bottom:  30px
+
+  .news__info--two-column
+    flex-direction: column-reverse
+
+  .news__action
+    left: 50%
+    transform: translateX(-50%)
+
+@media screen and (max-width: 550px)
+  .news
+    margin-bottom: 150px
+
+  .news__item
+    margin-left: 0
+    margin-right: 0
+    margin-bottom:  30px
+

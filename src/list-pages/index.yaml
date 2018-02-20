@@ -17,3 +17,17 @@ PageList:
   ready: 70
 - file: cart.html
   ready: 70
+- file: cabinet.html
+  ready: 70
+- file: examples.html
+  ready: 70
+- file: looks.html
+  ready: 70
+- file: looks2.html
+  ready: 10
+- file: news.html
+  ready: 70
+- file: article.html
+  ready: 70
+- file: archive.html
+  ready: 70
