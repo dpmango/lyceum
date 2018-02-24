@@ -5,7 +5,7 @@
     position: relative
     display: flex
     flex-wrap: wrap
-    padding: em(32) em(52) em(35) em(64)
+    padding: em(32) em(52) em(25) em(64)
     border: 2px solid $mainColor
 
   &__list
@@ -13,7 +13,7 @@
       margin-right: em(44)
 
   &__item
-    margin-bottom: em(13)
+    margin-bottom: em(9)
     color: $mainColor
     &:last-child
       margin-bottom: 0
@@ -24,13 +24,38 @@
       text-transform: uppercase
 
   &__link
+    position: relative
+    display: block
+    padding-bottom: em(6)
+    text-decoration: none
     color: $mainColor
+    overflow: hidden
+    &::after
+      content: ''
+      position: absolute
+      left: 50%
+      bottom: 0
+      width: 0
+      height: 2px
+      background-color: $blue
+      transition: all .3s ease
+
+    &:hover
+      color: $mainColor
+      text-decoration: none
+
+      &::after
+        left: 0
+        right: 0
+        width: 100%
 
   &__subscribe
     flex-basis: em(330)
     margin-left: auto
     text-align: center
 
+    a
+      min-width: 171px
   &__cube
     &--white
       top: em(-75)
@@ -53,9 +78,56 @@
     text-transform: uppercase
 
   &__text
-    margin: 0 0 em(36, 12)
+    margin: 0 0 em(26, 12)
     font-size: em(12)
     line-height: em(19, 12)
 
   &__btn
     text-transform: none
+
+@media screen and (max-width: 991px)
+  .footer__cube--white
+    left: -48px
+    top: -130px
+
+  .footer__cube--blue
+    bottom: -85px
+
+@media screen and (max-width: 767px)
+  .footer__wrapper
+    padding-left: em(20)
+    padding-right: em(20)
+
+    .footer__subscribe
+      margin-right: auto
+      margin-left: auto
+
+  .footer__cube--blue
+    left: 30px
+
+@media screen and (min-width: 471px) and (max-width: 840px)
+  .footer__wrapper
+    justify-content: space-around
+
+  .footer__subscribe
+    flex-basis: 100%
+    margin-top: 35px
+
+@media screen and (max-width: 470px)
+  .footer__wrapper
+    justify-content: flex-start
+
+  .footer__list
+    margin-bottom: 40px
+    &--buy
+      order: 2
+    &--info
+      order: 3
+
+  .footer__subscribe
+    margin-bottom: 50px
+    order: 1
+
+  .subscribe__text br
+    display: none
+

@@ -1,8 +1,8 @@
 .wrapper
   max-width: 1112px
   margin: 0 auto
-  padding-left: 15px
-  padding-right: 15px
+  padding-left: 40px
+  padding-right: 40px
 
 .row
   display: flex
@@ -35,24 +35,31 @@
 
 .bag-ico
   display: inline-block
-  @include sprite-box($s-bag)
+  width: em(20)
+  height: em(19)
+  background: url("../img/shopping-basket.svg") no-repeat
+  background-size: contain
+  //@include sprite-box($s-bag)
 
 .btn
   display: inline-block
-  max-width: em(261, 14)
-  padding:  em(12, 14) em(60, 14)
+  min-width: em(262, 14)
+  //padding:  em(12, 14) em(60, 14)
+  padding-top: em(12, 14)
+  padding-bottom: em(12, 14)
   text-transform: uppercase
   color: #fff
   text-decoration: none
   text-align: center
   box-sizing: border-box
-  transition: background ease .4s
+  transition: background ease .2s
   &:hover
     color: #fff
     text-decoration: none
 
   &--grey
-    padding: em(9) em(42)
+    padding-top: em(9)
+    padding-bottom: em(9)
     border: em(2) solid $mainColor
     color: $mainColor
     text-decoration: none
@@ -82,6 +89,7 @@
     padding-right: em(58)
 
   &--xs
+    min-width: em(187)
     padding-left: em(20)
     padding-right: em(20)
 
@@ -111,8 +119,11 @@
 
 
 .logo__img
-  width: em(73)
-  height: em(56)
+  display: inline-block
+  width: em(76)
+  height: em(76)
+  fill: #005480
+
 
 .play-icon
   display: inline-block
@@ -242,6 +253,7 @@
     &:before, &:after
       transform: rotate(0deg)
 
+
 .pull-left
   float: left
 
@@ -249,6 +261,7 @@
   float: right
 
 .nice-select
+  font-family: $apercuLight
   width: em(170)
   padding: 0 em(31, 14) 0 0
   height: em(39, 14)
@@ -257,6 +270,7 @@
   background-color: $grey
   line-height: em(33, 14)
   text-align: right !important
+  font-size: em(14)
   &::after
     right: em(7)
     margin-top: em(-6)
@@ -281,10 +295,13 @@
   .current
     display: inline-block
     font-family: $apercuLight
-    font-size: em(14)
+    font-size: em(14, 14)
     height: 100%
 
   .list
+    left: em(-2)
+    width: auto !important
+    right: em(-2)
     z-index: 100
 
   &:active,
@@ -365,6 +382,24 @@
   margin: 20px auto
 
 
+@media screen and (max-width: 767px)
+  .wrapper
+    padding-left: 20px
+    padding-right: 20px
+
+  .btn
+    min-width: 100%
+    &--xs
+      padding-left: 20px
+      padding-right: 20px
+
+    &--sm
+      padding-left: em(20)
+      padding-right: em(20)
+
 @media screen and (max-width: 500px)
   .white-popup
-    padding: 30px 30px 35px
+    padding: 30px 15px 35px
+    margin-left: 0
+    margin-right: 0
+    max-width: 100%

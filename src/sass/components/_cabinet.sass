@@ -31,11 +31,17 @@
     text-transform: uppercase
 
   &__photo
+    position: relative
     float: left
     max-width: em(157)
     max-height: em(157)
     margin-right: em(11)
     border-radius: 50%
+    overflow: hidden
+
+    img
+      display: block
+      width: 100%
 
   &__age
     margin-bottom: em(9)
@@ -63,7 +69,7 @@
     border: em(2) solid $mainColor
     background-color: $grey
     cursor: pointer
-    transition: background .5s ease
+    transition: background .3s ease
     &:hover
       background-color: #c6c6c6
 
@@ -73,7 +79,9 @@
 .promo
   padding: 0 em(57) 0 em(47)
   border: em(2) solid $mainColor
-  background: url("../img/club360-logo.png") no-repeat 99.4% 52px
+  background: url("../img/360.svg") no-repeat 100% 18px
+  -webkit-background-size: 12.28571em 11em
+  background-size: em(191) em(224)
 
   &__title
     margin-top: em(42)
@@ -99,17 +107,20 @@
   a
     display: block
 
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 999px)
   .cabinet-wrapper
     margin-bottom: 130px
 
-@media screen and (max-width: 767px)
   .cabinet-banner
     display: none
 
   .cabinet
     flex-basis: 100%
     margin-right: 0
+
+@media screen and (max-width: 520px)
+  .promo
+    background-position: right top
 
 @media screen and (max-width: 440px)
   .cabinet__info

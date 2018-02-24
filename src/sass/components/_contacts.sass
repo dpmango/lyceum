@@ -4,15 +4,18 @@
 
   &__item
     cursor: pointer
+    margin-top: em(5)
+    margin-bottom: em(5)
 
   &__address
-    margin-bottom: em(5, 18)
+    margin-top: 0
+    margin-bottom: 0
     padding: em(16, 18) em(97, 18)
     font-family: $apercuBold
     font-size: em(18)
     color: #fff
     background-color: #38b69a
-    transition: background .6s ease
+    transition: background .3s ease
     &:hover
       background-color: #125a88
 
@@ -21,6 +24,7 @@
 
   &__map
     display: none
+    margin-top: em(3)
     &--open
       display: block
 
@@ -34,6 +38,9 @@
   width: 100%
   height: em(387)
   border: 2px solid $mainColor
+  box-sizing: border-box
+  .ymaps
+    width: 100%
 
 @media screen and (max-width: 767px)
   .contacts

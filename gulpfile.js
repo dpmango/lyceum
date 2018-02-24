@@ -14,6 +14,7 @@ let gulp 		= require('gulp'),
 	flexbugs    = require('postcss-flexbugs-fixes'),
 	postcss     = require('gulp-postcss'),
 	consolidate = require('gulp-consolidate'),
+    svgSprite 	= require('gulp-svg-sprites'),
 	yaml        = require('require-yaml');
 
 
@@ -43,7 +44,8 @@ gulp.task('scripts', function () {
 		'src/libs/slick-carousel/slick/slick.min.js',
         'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'src/libs/jquery-nice-select/js/jquery.nice-select.min.js',
-        'src/libs/jquery-mask-plugin/dist/jquery.mask.min.js'
+        'src/libs/jquery-mask-plugin/dist/jquery.mask.min.js',
+        'node_modules/svg4everybody/dist/svg4everybody.js'
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -82,6 +84,26 @@ gulp.task('sprite', function() {
     spriteData.css.pipe(gulp.dest('src/sass/')); // путь, куда сохраняем стили
 });
 
+gulp.task('svg-sprite', function (cb) {
+    return gulp.src('src/img/svg-sprite/*.svg')
+        .pipe(svgSprite({
+            shape: {
+                dimension: {         // Set maximum dimensions
+                    maxWidth: 500,
+                    maxHeight: 500
+                },
+                spacing: {         // Add padding
+                    padding: 0
+                }
+            },
+            mode: 'symbols',
+            svg: {
+                sprite: 'svg-sprite.svg'
+            }
+        }))
+        .pipe(gulp.dest('src/img/'));
+});
+
 gulp.task('list-pages', function() {
 	delete require.cache[require.resolve('./src/list-pages/index.yaml')]
 	var pages = require('./src/list-pages/index.yaml');
@@ -112,7 +134,7 @@ gulp.task('clean', function () {
 	return del.sync('dist');
 });
 
-gulp.task('build', ['clean', 'sass', 'css-libs', 'scripts', 'compressImages', 'sprite', 'list-pages'], function () {
+gulp.task('build', ['clean', 'sass', 'css-libs', 'scripts', 'compressImages', 'sprite', 'svg-sprite', 'list-pages'], function () {
 	gulp.src('src/*.html')
 		.pipe(gulp.dest('dist'));
 

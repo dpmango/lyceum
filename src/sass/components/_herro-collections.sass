@@ -35,7 +35,9 @@
   &__item
     position: relative
     flex-basis: 50%
-    margin-bottom: em(15)
+    margin-bottom: em(8)
+    display: flex
+    break-inside: avoid
 
   &__photo
     position: absolute
@@ -62,12 +64,28 @@
       margin-left: 24.9%
 
   &__link
+    position: relative
     font-family: $apercuBold
+    padding-bottom: em(7)
     text-transform: uppercase
     text-decoration: none
     color: #fff
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 0
+      height: 2px
+      background-color: $blue
+      transition: all .3s ease-in-out
+
     &:hover
-      text-decoration: underline
+      color: $blue
+      text-decoration: none
+
+      &::after
+        width: 80%
 
   &__cube
     &--aqua-left
@@ -91,8 +109,7 @@
     &__gradient
       margin-left: 0
       margin-right: 0
-      padding-left: 0
-      padding-right: 0
+      padding: 0 0 em(15) 0
       height: 100%
       transform: none
 
@@ -104,6 +121,9 @@
       flex-basis: 100%
       display: flex
       justify-content: center
+
+      &:first-child
+        margin-top: em(-30)
 
     &__photo
       position: static

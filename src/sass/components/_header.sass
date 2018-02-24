@@ -6,29 +6,52 @@
 
   &--with-bg
     margin-bottom: em(18)
+    padding-top: em(35)
     padding-bottom: em(230)
     background-size: contain
 
     .nav
       left: 0
 
+    .header__logo
+      margin-top: em(-17)
+      margin-left: 30.7%
+
+    .header__news
+      margin-top: em(14)
+
   .menu
     position: absolute
     &--type-static
       position: static
+
+      .header__menu-button
+        margin-bottom: em(16)
 
   &__news
     margin-top: em(24, 12)
     margin-right: em(6, 12)
 
   &__menu-button
-    background-color: transparent
-    border: 0
-    font-family: $apercuBold
-    font-size: em(37)
-    line-height: em(53, 37)
+    position: relative
+    width: em(120)
+    height: em(27)
+    //background: url("../img/menu.png") no-repeat
+    transition: all .3s ease
     text-transform: uppercase
     cursor: pointer
+    border: 0
+    background: transparent
+
+    img
+      position: absolute
+      left: 0
+      top: 0
+      display: block
+      width: 100%
+
+    img:last-of-type
+      display: none
 
 
   &__burger
@@ -106,6 +129,9 @@
   &__item
     margin-bottom: em(12)
 
+    &--club360
+      margin-left: em(-13)
+
     &--header
       margin-bottom: em(24, 43)
       font-family: $apercuBold
@@ -142,16 +168,18 @@
 
   &__bag-ico
     float: left
+    width: em(20)
+    height: em(19)
     margin-top: em(-2, 14)
     margin-right: em(5, 14)
 
   &__deferred-text
-    margin-top: -1px
+    margin-top: 0
     text-decoration: underline
 
   &__count
     display: inline-block
-    margin-top: em(3)
+    margin-top: em(4)
     margin-left: em(5)
     font-family: $apercuBold
     color: #125a88
@@ -164,15 +192,23 @@
     color: $mainColor
 
   &__profile-photo
+    position: relative
     margin-right: em(8)
-    width: em(16)
-    height: em(17)
     border-radius: 50%
+    overflow: hidden
+
+    img
+      display: block
+      width: em(16)
+      height: em(17)
 
   &__profile-name
     text-decoration: underline
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1169px)
+  .nav__wrapper
+    background: #fff
 
 @media screen and (max-width: 1020px)
   .header--with-bg
@@ -186,19 +222,91 @@
       left: auto
       bottom: -225px
 
+@media screen and (max-width: 991px)
+  .nav
+    &__col
+      display: flex
+      flex-wrap: wrap
+      flex-basis: 100%
+      &--collections
+        margin-right: 0
+    &__list
+      margin-bottom: 30px
+    &__item--header
+      margin-bottom: 30px !important
+    &__list--contacts
+      order: 2
+    &__list--stock
+      order: 1
+    &__list--fashion
+      order: 3
+    &__col--info
+      justify-content: space-between
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+  .nav__list--boys
+    margin-top: 73px
+
 @media screen and (max-width: 767px)
+  .header__cube--blue
+    display: none
+
+  .nav__wrapper
+    padding-left: 30px
+    padding-right: 30px
+
+  .nav
+    &__list
+      margin-right: 60px
+      &:last-child
+        margin-right: 0 !important
+    &__col--info
+      justify-content: flex-start
+    &__item--club360
+      display: none
+    &__link
+      font-size: 15px
+      img
+        width: 50%
+    &__item--header
+      font-size: 25px
+    &__list--boys
+      margin-top: 55px
+    &__list--contacts
+      order: inherit
+    &__list--stock
+      order: inherit
+    &__list--fashion
+      order: inherit
+
   .header__cube--white
     display: none
 
 @media screen and (max-width: 991px)
   .header--with-bg
     .header__cube--white-right
-      display: nonez
+      display: none
+
+@media screen and (min-width: 576px) and (max-width: 767px)
+  .nav
+    &__col--info
+      .nav__list
+      margin-right: 105px
+
+@media screen and (min-width: 414px) and (max-width: 566px)
+  .header__cube--white
+    right: 0
+
+  .nav
+    &__col--info
+      .nav__list
+      margin-right: 50px
 
 @media screen and (max-width: 566px)
   .header--with-bg
     .header__logo
       margin-right: 0
+      margin-left: auto
 
     .header-sub
       flex-direction: column
@@ -226,3 +334,48 @@
     padding-right: 15px
     padding-bottom: 100px
 
+@media screen and (min-width: 320px) and (max-width: 413px)
+  .header
+    margin-bottom: 20px
+
+  .header__cube--white
+    display: none
+
+  .menu
+    position: static
+
+  .header__logo
+    margin-right: 0
+
+  .header-sub
+    margin-top: 10px
+    align-items: center
+    display: flex
+    justify-content: space-between
+    .header-sub__link--deferred
+      order: 1
+    .header-sub__link--vk
+      order: 2
+    .header-sub__link--instagram
+      order: 3
+    br
+      display: none
+
+  .nav__close
+    width: 23px
+    height: 23px
+    right: 15px
+
+  .nav__list
+    flex-basis: 100%
+    margin-right: 0
+
+//@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
+  .header__menu-button
+    background: url("../img/menu@2x.png") no-repeat
+    background-size: em(120, 37) em(27, 37)
+
+
+@media screen and (max-width: 409px)
+  .nav__list--boys
+    margin-top: 0

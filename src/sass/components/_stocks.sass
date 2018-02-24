@@ -62,3 +62,57 @@
     font-family: $apercuBold
     text-transform: uppercase
     font-size: em(48)
+
+@media screen and (min-width: 1366px)
+  .stock__full,  .stock__half
+    img
+      width: 100%
+
+@media screen and (max-width: 767px)
+  .stock__btn--sale, .stock__btn--club
+    bottom: 1px
+    left: 50%
+    transform: translateX(-50%)
+    opacity: 0.8
+    padding-top: 15px
+    padding-bottom: 15px
+
+  .stock__btn--half
+    bottom: 1px
+
+  .stock__half
+    flex-basis: auto
+    margin-left: auto !important
+    margin-right: auto !important
+    text-align: center
+    align-self: center
+    img
+      display: inline-block
+
+  .stock
+    flex-wrap: wrap
+
+@media screen and (min-width: 576px) and (max-width: 767px)
+  .stock__btn--half
+    left: 50%
+    bottom: 0
+    transform: translateX(-50%)
+
+@media screen and (max-width: 566px)
+  .stocks
+    padding-top: 30px
+
+  .stock__half
+    img
+      width: 100%
+
+  .stock__btn--half
+    left: 50%
+    right: 0
+    opacity: 0.8
+    padding-top: 15px
+    padding-bottom: 15px
+    transform: translateX(-50%)
+
+  .stock__sale-text
+    display: none

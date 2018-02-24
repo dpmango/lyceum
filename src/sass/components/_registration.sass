@@ -15,7 +15,7 @@
       display: block
       width: em(172, 18)
       height: em(154, 18)
-      background: url("../img/club360-logo.png") no-repeat center center
+      background: url("../img/360.svg") no-repeat center center
       background-size: contain
 
   &__form
@@ -101,9 +101,19 @@
     display: inline-block
     width: em(233)
     height: em(233)
-    background: url("../img/add-photo.png") no-repeat center center
-    background-size: contain
+    background: url("../img/woman.svg") no-repeat center center
+    background-size: 233px 233px
     cursor: pointer
+    transition: background .3s ease
+
+    &--man
+      background: url("../img/man.svg") no-repeat center -3px
+
+    &--boy
+      background: url("../img/boy.svg") no-repeat center center
+
+    &--girl
+      background: url("../img/girl.svg") no-repeat center center
 
     & + input[type=file]
       display: none

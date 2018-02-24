@@ -8,7 +8,7 @@
   &__item
     position: relative
     margin: 0 em(14.5) em(30)
-    width: em(351)
+    max-width: 31.5%
     &:first-child
       margin-left: 0
     &:last-child
@@ -17,11 +17,11 @@
   &__info
     width: 100%
     margin-bottom: em(3)
-    padding: em(3) em(12) em(8) em(12)
+    padding: em(10) em(12) em(10) em(12)
     background-color: #125a88
     box-sizing: border-box
     cursor: pointer
-    transition: background ease .5s
+    transition: background ease .3s
     &:hover
       background-color: $accentColor
     
@@ -71,20 +71,32 @@
   .vacancies__item
     margin-left: 0
     margin-right: 15px
-    width: 300px
+    max-width: 29%
 
-@media screen and (min-width: 767px) and (max-width: 991px)
+@media screen and (min-width: 768px) and (max-width: 991px)
   .vacancies__item
     margin-left: 0
     margin-right: 15px
-    width: 230px
+    max-width: 47%
+    width: 47%
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 767px)
   .vacancies
     margin-bottom: 150px
-    justify-content: center
+    justify-content: flex-start
 
   .vacancies__item
     margin-left: 0
-    margin-right: 0
     flex-basis: 100%
+
+@media screen and (min-width: 600px) and (max-width: 767px)
+  .vacancies__item
+    max-width: 47%
+
+@media screen and (max-width: 599px)
+  .vacancies
+    justify-content: center
+
+  .vacancies__item
+    margin: 0 0 10px
+    max-width: 100%

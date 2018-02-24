@@ -60,6 +60,7 @@
   &__btn
     margin-right: em(2)
     width: em(170)
+    min-width: em(170)
     height: em(39)
     box-sizing: border-box
     &:last-child
@@ -70,7 +71,7 @@
   margin-left: em(10)
 
   &__stock
-    padding: em(8) em(20) em(32) em(46)
+    padding: em(8) em(20) em(28) em(46)
     border: em(2) solid $mainColor
 
 
@@ -117,8 +118,8 @@
 
   &__code
     margin-right: em(9)
-    padding: em(3) em(30)
-    width: em(169)
+    padding: em(3) em(30) !important
+    width: em(169) !important
     height: em(39)
     font-family: $apercuLight
     border: em(2) solid $mainColor
@@ -140,7 +141,7 @@
     background-color: #005480
     box-sizing: border-box
     color: #fff
-    transition: background ease .4s
+    transition: background ease .3s
     cursor: pointer
     &:hover
       background-color: #2579bf
@@ -163,7 +164,7 @@
     text-transform: uppercase
     text-align: center
     background-color: #125a88
-    transition: background ease .4s
+    transition: background ease .3s
     text-decoration: none
     &:hover
       background-color: #2579bf
@@ -202,6 +203,18 @@
     font-size: em(12)
     line-height: em(21, 12)
 
+.cart-item__colors
+  .product-colors__item
+    input[type="radio"]:checked~label span::after
+      display: none
+
+
+.cart-item__sizes
+  .product-sizes__item
+    input[type="radio"]:checked~label
+      background: transparent
+      color: #000
+
 @media screen and (max-width: 1134px)
   .cart-list
     flex-basis: 100%
@@ -234,9 +247,13 @@
     margin-top: 10px
 
 @media screen and (max-width: 600px)
-    .cart-item__image
-      margin: 20px auto
-      float: none
+  .cart-item
+    padding-left: 20px
+    padding-right: 20px
+
+  .cart-item__image
+    margin: 20px auto
+    float: none
 
 @media screen and (max-width: 440px)
   .cart-info__application
@@ -244,5 +261,11 @@
     padding-right: 12px
 
   .cart-item__btn
+    display: block
+    margin-left: auto
+    margin-right: auto
     width: 118px
     margin-bottom: 10px
+
+    &:last-child
+      margin-right: auto

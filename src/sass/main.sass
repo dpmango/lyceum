@@ -30,7 +30,6 @@ $browser-context: 14 // Default
 @import "components/news"
 @import "components/article"
 @import "components/archive"
-@import "media"
 
 
 *, *:focus, *:hover
@@ -62,6 +61,7 @@ a:hover
   text-decoration: underline
 
 input[type=text], input[type=email]
+  font-family: $apercuLight
   margin-top: 0
   margin-bottom: em(6)
   padding: em(9.5) em(10)
@@ -73,6 +73,7 @@ input[type=text], input[type=email]
   border: em(2) solid $mainColor
   background-color: $grey
   transition: border .2s ease-in-out
+  font-weight: 400
 
   &:hover, &:focus
     border-color: $blue
@@ -95,3 +96,33 @@ input[type=text], input[type=email]
 
 .bgn
   background: none
+
+@media screen and (min-width: 1920px)
+  body
+    font-size: 19.66px
+
+  .wrapper
+    max-width: 1562px
+
+@media screen and (min-width: 1600px) and (max-width: 1919px)
+  body
+    font-size: 16.39px
+
+  .wrapper
+    max-width: 1302px
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+  body
+    font-size: 14px
+
+@media screen and (min-width: 576px) and (max-width: 767px)
+  body
+    font-size: 13px
+
+@media screen and (min-width: 414px) and (max-width: 566px)
+  body
+    font-size: 13px
+
+@media screen and (min-width: 320px) and (max-width: 413px)
+  body
+    font-size: 14px
