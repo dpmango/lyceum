@@ -20,6 +20,9 @@
     border-left: 0
 
   &__list
+    display: flex
+    flex-direction: column
+    align-items: flex-start
     margin-top: em(243)
     margin-left: em(-74)
 
@@ -32,20 +35,21 @@
     &::after
       content: ''
       position: absolute
-      left: 0
+      left: 50%
       bottom: 0
       width: 0
       height: 2px
       background-color: $blue
-      transition: all .3s ease-in-out
+      transition: all .3s ease
 
     &:hover
-      padding-left: em(5)
       color: $mainColor
       text-decoration: none
 
       &::after
-        width: 80%
+        left: 0
+        right: 0
+        width: 100%
 
   &__list-link
     font-size: em(12)

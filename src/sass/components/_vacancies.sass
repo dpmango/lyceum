@@ -1,7 +1,6 @@
 .vacancies
   display: flex
   justify-content: flex-start
-  flex-wrap: wrap
   margin-top: em(48)
   margin-bottom: em(105)
 
@@ -13,6 +12,9 @@
       margin-left: 0
     &:last-child
       margin-right: 0
+
+    &.is-open
+      margin-bottom: em(30)
 
   &__info
     width: 100%
@@ -71,7 +73,7 @@
   .vacancies__item
     margin-left: 0
     margin-right: 15px
-    max-width: 29%
+    max-width: 32.3%
 
 @media screen and (min-width: 768px) and (max-width: 991px)
   .vacancies__item
@@ -84,6 +86,7 @@
   .vacancies
     margin-bottom: 150px
     justify-content: flex-start
+    flex-wrap: wrap
 
   .vacancies__item
     margin-left: 0

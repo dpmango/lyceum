@@ -30,7 +30,9 @@
 
             <nav class="nav" style="display: none">
                 <div class="wrapper nav__wrapper">
-                    <button type="button" class="nav__close js-close-menu"></button>
+                    <button type="button" class="nav__close js-close-menu">
+                        <svg><use xlink:href="img/svg/symbols.svg#close"></use></svg>
+                    </button>
                     <div class="nav__col nav__col--collections">
                         <ul class="nav__list nav__list--girls">
                             <li class="nav__item nav__item--header">Коллекции</li>
@@ -214,8 +216,8 @@
                                         <input type="text" name="first-name" placeholder="Имя" required>
                                         <input type="text" name="second-name" placeholder="Отчество" required>
                                         <select name="scholar-gender" class="registration__select js-scholar-gender">
-                                            <option value="mother">Я ученик</option>
-                                            <option value="father">Я ученица</option>
+                                            <option value="boy">Я ученик</option>
+                                            <option value="girl">Я ученица</option>
                                         </select>
                                         <input type="text" name="date" class="js-date" placeholder="Дата рождения">
                                         <input type="text" name="phone" class="js-phone" placeholder="Номер телефона">
@@ -335,7 +337,6 @@
     </div>
 
     <script src="js/libs.min.js" type="text/javascript"></script>
-    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
     <script src="js/main.js"></script>
 
 </body>

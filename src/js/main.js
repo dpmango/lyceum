@@ -21,12 +21,13 @@ $(document).ready(function () {
     });
 
     /* VACANCIES SWITCHER */
-    if(window.screen.width < 992) {
-        $('.js-vacancies').on('click', function () {
+    $('.js-vacancies').on('click', function () {
+        if(window.screen.width <= 992) {
+            $(this).toggleClass('is-open');
             $(this).find('.vacancies__description').slideToggle(300);
-            $(this).find('.vacancies__btn').fadeToggle(300);
-        });
-    }
+            $(this).find('.vacancies__btn').fadeToggle(300).css("display","inline-block");
+        }
+    });
 
 
 
@@ -130,25 +131,38 @@ $(document).ready(function () {
 
     /* Change photo placeholder for parent registration in club 360 */
     $('.js-parent-gender').on('change', function () {
-        $('[data-src=parent]').find('.js-add-photo').toggleClass('registration__add-photo--man');
+        var gender = $(this).val();
+        if(gender === 'mother') {
+            $('[data-src=parent]').find('.js-add-photo').removeClass('registration__add-photo--man')
+        } else if (gender === 'father') {
+            $('[data-src=parent]').find('.js-add-photo').addClass('registration__add-photo--man')
+        }
     });
 
     /* Change photo placeholder for scholars registration in club 360 */
     $('.js-scholar-gender').on('change', function () {
-        $('[data-src=scholar]').find('.js-add-photo').toggleClass('registration__add-photo--girl');
+        var gender = $(this).val();
+        if(gender === 'girl') {
+            $('[data-src=scholar]').find('.js-add-photo').addClass('registration__add-photo--girl');
+        } else if (gender === 'boy') {
+            $('[data-src=scholar]').find('.js-add-photo').removeClass('registration__add-photo--girl');
+        }
     });
 
-    if(window.screen.width > 767) {
-        $('.js-open-menu').mouseover(function() {
+    $('.js-open-menu').mouseover(function() {
+        if(window.screen.width >= 767) {
             $(this).find('img:first-of-type').fadeOut(150);
             $('.js-open-menu').find('img:last-of-type').fadeIn(250);
-        });
+        }
 
-        $('.js-open-menu').mouseleave(function() {
+    });
+
+    $('.js-open-menu').mouseleave(function() {
+        if(window.screen.width >= 767) {
             $(this).find('img:last-of-type').fadeOut(150);
             $('.js-open-menu').find('img:first-of-type').fadeIn(250);
-        });
-    }
+        }
+    });
 
     svg4everybody();
 });

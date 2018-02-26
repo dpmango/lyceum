@@ -98,12 +98,12 @@
     top: em(13)
     right: em(30)
     padding: 0
-    width: em(38)
-    height: em(36)
-    background: url("../img/close.svg") no-repeat
-    background-size: contain
+    background-color: transparent
     border: 0
     cursor: pointer
+    svg
+      width: em(38)
+      height: em(36)
 
   &__col
     &--collections
@@ -159,7 +159,9 @@
     margin-bottom: em(8, 14)
 
     &--deferred
-      margin-bottom: em(11)
+      display: flex
+      align-items: center
+      margin-bottom: em(-2)
       padding-top: 1px
       letter-spacing: 1px
       text-decoration: none
@@ -174,7 +176,7 @@
     margin-right: em(5, 14)
 
   &__deferred-text
-    margin-top: 0
+    margin-top: em(-4)
     text-decoration: underline
 
   &__count
@@ -361,7 +363,7 @@
     br
       display: none
 
-  .nav__close
+  .nav__close svg
     width: 23px
     height: 23px
     right: 15px
