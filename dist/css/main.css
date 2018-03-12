@@ -995,24 +995,15 @@ img.mfp-img {
   display: block; }
 
 @font-face {
-  font-family: 'ApercuPro-Bold';
-  src: url("../fonts/ApercuPro-Bold.eot");
-  src: url("../fonts/ApercuPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ApercuPro-Bold.woff") format("woff"), url("../fonts/ApercuPro-Bold.woff2") format("woff2"), url("../fonts/ApercuPro-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ApercuPro-Light';
-  src: url("../fonts/ApercuPro-Light.eot");
-  src: url("../fonts/ApercuPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ApercuPro-Light.woff") format("woff"), url("../fonts/ApercuPro-Light.woff2") format("woff2"), url("../fonts/ApercuPro-Light.ttf") format("truetype");
+  font-family: 'GillSans-Regular';
+  src: url("../fonts/GillSans.woff2") format("woff2"), url("../fonts/GillSans.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'ApercuPro-Regular';
-  src: url("../fonts/ApercuPro-Regular.eot");
-  src: url("../fonts/ApercuPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ApercuPro-Regular.woff") format("woff"), url("../fonts/ApercuPro-Regular.woff2") format("woff2"), url("../fonts/ApercuPro-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-family: 'GillSans-Bold';
+  src: url("../fonts/GillSans-SemiBold.woff2") format("woff2"), url("../fonts/GillSans-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal; }
 
 /*
@@ -1040,6 +1031,9 @@ img.mfp-img {
   padding-right: 40px; }
 
 .row {
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1343,7 +1337,7 @@ img.mfp-img {
   float: right; }
 
 .nice-select {
-  font-family: "ApercuPro-Light", Arial, sans-serif;
+  font-family: "GillSans-Regalar", Arial, sans-serif;
   width: 12.14286em;
   padding: 0 2.21429em 0 0;
   height: 2.78571em;
@@ -1378,7 +1372,7 @@ img.mfp-img {
     transform: rotate(-180deg); }
   .nice-select .current {
     display: inline-block;
-    font-family: "ApercuPro-Light", Arial, sans-serif;
+    font-family: "GillSans-Regalar", Arial, sans-serif;
     font-size: 1em;
     height: 100%; }
   .nice-select .list {
@@ -1460,7 +1454,7 @@ img.mfp-img {
 .white-popup {
   position: relative;
   background: #f7f9f7;
-  padding: 110px 40px 25px;
+  padding: 110px 40px 55px;
   width: auto;
   max-width: 80%;
   margin: 20px auto; }
@@ -1578,19 +1572,18 @@ img.mfp-img {
     top: 0.92857em;
     right: 2.14286em;
     padding: 0;
-    width: 2.71429em;
-    height: 2.57143em;
-    background: url("../img/close.svg") no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background-color: transparent;
     border: 0;
     cursor: pointer; }
+    .nav__close svg {
+      width: 2.71429em;
+      height: 2.57143em; }
   .nav__col--collections {
     margin-right: 8.64286em; }
   .nav__list--girls {
     margin-bottom: 2.42857em; }
   .nav__first-word {
-    font-family: "ApercuPro-Bold", Arial, sans-serif; }
+    font-family: "GillSans-Bold", Arial, sans-serif; }
   .nav__link {
     color: #000;
     text-decoration: none;
@@ -1605,7 +1598,7 @@ img.mfp-img {
       margin-left: -0.92857em; }
     .nav__item--header {
       margin-bottom: 0.55814em;
-      font-family: "ApercuPro-Bold", Arial, sans-serif;
+      font-family: "GillSans-Bold", Arial, sans-serif;
       font-size: 3.07143em;
       text-transform: uppercase; }
       .nav__item--header-fashion {
@@ -1627,7 +1620,15 @@ img.mfp-img {
     color: #000;
     margin-bottom: 0.57143em; }
     .header-sub__link--deferred {
-      margin-bottom: 0.78571em;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: -0.14286em;
       padding-top: 1px;
       letter-spacing: 1px;
       text-decoration: none; }
@@ -1640,13 +1641,13 @@ img.mfp-img {
     margin-top: -0.14286em;
     margin-right: 0.35714em; }
   .header-sub__deferred-text {
-    margin-top: 0;
+    margin-top: -0.28571em;
     text-decoration: underline; }
   .header-sub__count {
     display: inline-block;
     margin-top: 0.28571em;
     margin-left: 0.35714em;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     color: #125a88;
     text-decoration: none; }
   .header-sub__profile {
@@ -1868,7 +1869,7 @@ img.mfp-img {
       order: 3; }
     .header-sub br {
       display: none; }
-  .nav__close {
+  .nav__close svg {
     width: 23px;
     height: 23px;
     right: 15px; }
@@ -1895,8 +1896,22 @@ img.mfp-img {
     flex-wrap: wrap;
     padding: 2.28571em 3.71429em 1.78571em 4.57143em;
     border: 2px solid #000; }
-  .footer__list--buy {
-    margin-right: 3.14286em; }
+  .footer__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .footer__list--buy {
+      margin-right: 3.14286em; }
   .footer__item {
     margin-bottom: 0.64286em;
     color: #000; }
@@ -1904,7 +1919,7 @@ img.mfp-img {
       margin-bottom: 0; }
     .footer__item--header {
       font-size: 1em;
-      font-family: "ApercuPro-Bold", Arial, sans-serif;
+      font-family: "GillSans-Bold", Arial, sans-serif;
       text-transform: uppercase; }
   .footer__link {
     position: relative;
@@ -2159,7 +2174,7 @@ img.mfp-img {
     position: absolute;
     top: 38%;
     right: 25.7%;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     text-transform: uppercase;
     font-size: 3.42857em; }
 
@@ -2240,6 +2255,19 @@ img.mfp-img {
     border: 2px solid #000;
     border-left: 0; }
   .style-news__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     margin-top: 17.35714em;
     margin-left: -5.28571em; }
   .style-news__list-item {
@@ -2253,20 +2281,21 @@ img.mfp-img {
     .style-news__list-item::after {
       content: '';
       position: absolute;
-      left: 0;
+      left: 50%;
       bottom: 0;
       width: 0;
       height: 2px;
       background-color: #005480;
-      -webkit-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out; }
+      -webkit-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease; }
     .style-news__list-item:hover {
-      padding-left: 0.35714em;
       color: #000;
       text-decoration: none; }
       .style-news__list-item:hover::after {
-        width: 80%; }
+        left: 0;
+        right: 0;
+        width: 100%; }
   .style-news__list-link {
     font-size: 0.85714em;
     text-transform: uppercase;
@@ -2309,7 +2338,7 @@ img.mfp-img {
       display: block;
       margin-bottom: 5px; }
     .how-created__title span:first-child {
-      font-family: "ApercuPro-Light", Arial, sans-serif;
+      font-family: "GillSans-Regalar", Arial, sans-serif;
       font-size: 4.5177em;
       font-weight: 400; }
     .how-created__title span:nth-child(2n) {
@@ -2415,17 +2444,17 @@ img.mfp-img {
     margin-bottom: 0.5em;
     line-height: 1.16667em;
     text-transform: uppercase;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     color: #000;
     text-decoration: none; }
   .news-column__text {
     margin-top: 0;
     margin-bottom: 0.41667em;
-    font-family: 'ApercuPro-Regular', Arial, sans-serif;
+    font-family: 'GillSans-Regular', Arial, sans-serif;
     line-height: 1.125em; }
   .news-column__link {
     display: inline-block;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     color: #000; }
 
 @media screen and (max-width: 1140px) {
@@ -2493,12 +2522,14 @@ img.mfp-img {
     break-inside: avoid; }
   .hero-collections__photo {
     position: absolute; }
+    .hero-collections__photo img {
+      max-width: 338px; }
     .hero-collections__photo--left {
       left: 2.42857em;
       top: 0.35714em; }
     .hero-collections__photo--right {
       right: 4.92857em;
-      top: -1em; }
+      top: -2.5em; }
   .hero-collections__collection {
     float: left;
     -webkit-column-count: 2;
@@ -2515,11 +2546,15 @@ img.mfp-img {
       margin-left: 24.9%; }
   .hero-collections__link {
     position: relative;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     padding-bottom: 0.5em;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    overflow: hidden; }
     .hero-collections__link::after {
       content: '';
       position: absolute;
@@ -2639,9 +2674,6 @@ img.mfp-img {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   margin-top: 3.42857em;
   margin-bottom: 7.5em; }
   .vacancies__item {
@@ -2652,6 +2684,8 @@ img.mfp-img {
       margin-left: 0; }
     .vacancies__item:last-child {
       margin-right: 0; }
+    .vacancies__item.is-open {
+      margin-bottom: 2.14286em; }
   .vacancies__info {
     width: 100%;
     margin-bottom: 0.21429em;
@@ -2675,7 +2709,7 @@ img.mfp-img {
   .vacancies__clarify {
     margin-top: 0;
     margin-bottom: 0;
-    font-family: "ApercuPro-Light", Arial, sans-serif;
+    font-family: "GillSans-Regalar", Arial, sans-serif;
     font-size: 1em;
     color: #fff; }
   .vacancies__description {
@@ -2709,7 +2743,7 @@ img.mfp-img {
   .vacancies__item {
     margin-left: 0;
     margin-right: 15px;
-    max-width: 29%; } }
+    max-width: 32.3%; } }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .vacancies__item {
@@ -2724,7 +2758,10 @@ img.mfp-img {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
   .vacancies__item {
     margin-left: 0;
     -webkit-flex-basis: 100%;
@@ -2766,7 +2803,7 @@ img.mfp-img {
     margin-bottom: 2em; }
   .categories__item {
     margin-bottom: 0.66667em;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     font-size: 0.85714em; }
     .categories__item:last-child {
       margin-bottom: 0; }
@@ -2776,7 +2813,7 @@ img.mfp-img {
     .categories__item--collection {
       text-transform: none; }
       .categories__item--collection span {
-        font-family: "ApercuPro-Light", Arial, sans-serif; }
+        font-family: "GillSans-Regalar", Arial, sans-serif; }
   .categories__link {
     color: #000;
     text-decoration: none; }
@@ -2888,7 +2925,7 @@ img.mfp-img {
   .product-info__price {
     margin-top: 0;
     margin-bottom: 0.58333em;
-    font-family: 'ApercuPro-Regular', Arial, sans-serif;
+    font-family: 'GillSans-Regular', Arial, sans-serif;
     font-size: 2.57143em; }
     .product-info__price span {
       margin-left: 0.20833em;
@@ -2896,20 +2933,20 @@ img.mfp-img {
   .product-info__description {
     margin-top: 0.71429em;
     margin-bottom: 1.21429em;
-    font-family: "ApercuPro-Light", Arial, sans-serif;
+    font-family: "GillSans-Regalar", Arial, sans-serif;
     word-break: break-all;
     white-space: pre-wrap;
     line-height: 1.57143em; }
   .product-info__code {
     margin-bottom: 2.5em;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     font-size: 0.85714em; }
   .product-info__count {
     margin-bottom: 2.58333em;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     font-size: 0.85714em; }
     .product-info__count span {
-      font-family: "ApercuPro-Light", Arial, sans-serif; }
+      font-family: "GillSans-Regalar", Arial, sans-serif; }
 
 .product-colors {
   display: -webkit-box;
@@ -2955,7 +2992,7 @@ img.mfp-img {
   .product-colors__title {
     width: auto;
     height: auto;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     font-size: 0.85714em;
     margin-right: 0.75em; }
   .product-colors__color {
@@ -3025,11 +3062,22 @@ img.mfp-img {
       background: #000;
       color: #fff; }
   .product-sizes__size {
-    display: block;
-    padding-top: 0.28571em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0;
     width: 100%;
     height: 100%;
-    font-family: "ApercuPro-Light", Arial, sans-serif;
+    font-family: "GillSans-Regalar", Arial, sans-serif;
     text-decoration: none;
     color: #000;
     -webkit-box-sizing: border-box;
@@ -3038,10 +3086,10 @@ img.mfp-img {
 .product-structure {
   margin-bottom: 1.5em; }
   .product-structure__title {
-    font-family: "ApercuPro-Bold", Arial, sans-serif !important;
+    font-family: "GillSans-Bold", Arial, sans-serif !important;
     font-size: 0.85714em; }
   .product-structure__item {
-    font-family: "ApercuPro-Light", Arial, sans-serif;
+    font-family: "GillSans-Regalar", Arial, sans-serif;
     font-size: 0.85714em;
     line-height: 1.66667em; }
 
@@ -3098,7 +3146,7 @@ img.mfp-img {
     display: inline-block;
     margin-top: 0;
     text-align: left;
-    font-family: "ApercuPro-Light", Arial, sans-serif;
+    font-family: "GillSans-Regalar", Arial, sans-serif;
     line-height: 1.64286em; }
 
 .similar {
@@ -3369,7 +3417,7 @@ img.mfp-img {
   -ms-flex: 1;
   flex: 1 1 0%;
   max-width: 16.07143em;
-  max-height: 27.5em;
+  max-height: 31.78571em;
   margin-right: 0.42857em;
   margin-bottom: 0.21429em;
   z-index: 10;
@@ -3406,7 +3454,7 @@ img.mfp-img {
     text-align: center; }
   .product__price {
     margin-top: 0.25em;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     font-size: 0.85714em;
     text-align: center; }
 
@@ -3462,7 +3510,7 @@ img.mfp-img {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0.88889em 5.38889em;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     font-size: 1.28571em;
     color: #fff;
     background-color: #38b69a;
@@ -3490,10 +3538,14 @@ img.mfp-img {
   border: 2px solid #000;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-  #map-pobeda .ymaps,
-  #map-lenin .ymaps,
-  #map-sibir .ymaps {
-    width: 100%; }
+  #map-pobeda .ymaps-glass-pane,
+  #map-pobeda .ymaps-map,
+  #map-lenin .ymaps-glass-pane,
+  #map-lenin .ymaps-map,
+  #map-sibir .ymaps-glass-pane,
+  #map-sibir .ymaps-map {
+    width: 100%;
+    height: 100% !important; }
 
 @media screen and (max-width: 767px) {
   .contacts {
@@ -3544,7 +3596,7 @@ img.mfp-img {
     margin-bottom: 0.5em;
     font-size: 1em; }
   .cart-item__description {
-    font-family: "ApercuPro-Light", Arial, sans-serif;
+    font-family: "GillSans-Regalar", Arial, sans-serif;
     margin-top: 0.71429em;
     margin-bottom: 0.64286em;
     word-break: break-all;
@@ -3552,11 +3604,11 @@ img.mfp-img {
     line-height: 1.57143em;
     display: inline-block; }
   .cart-item__code {
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     font-size: 0.85714em;
     margin-bottom: 1.25em; }
   .cart-item__count {
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     font-size: 0.85714em; }
   .cart-item__colors {
     margin-bottom: 1.14286em; }
@@ -3592,7 +3644,7 @@ img.mfp-img {
     text-transform: uppercase; }
     .cart-info__title--main {
       margin-bottom: 1.5em;
-      font-family: "ApercuPro-Bold", Arial, sans-serif; }
+      font-family: "GillSans-Bold", Arial, sans-serif; }
     .cart-info__title:nth-child(4) {
       margin-top: 1.42857em;
       margin-bottom: 0; }
@@ -3623,7 +3675,7 @@ img.mfp-img {
     padding: 0.21429em 2.14286em !important;
     width: 12.07143em !important;
     height: 2.78571em;
-    font-family: "ApercuPro-Light", Arial, sans-serif;
+    font-family: "GillSans-Regalar", Arial, sans-serif;
     border: 0.14286em solid #000;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
@@ -3655,7 +3707,7 @@ img.mfp-img {
     .cart-info__code-add:active, .cart-info__code-add.nice-select.open {
       background-color: #006889; }
   .cart-info__total {
-    font-family: "ApercuPro-Bold", Arial, sans-serif; }
+    font-family: "GillSans-Bold", Arial, sans-serif; }
   .cart-info__send {
     padding: 0.71429em 1.42857em;
     display: inline-block;
@@ -3698,7 +3750,7 @@ img.mfp-img {
   text-align: center; }
 
 .cart-info__stock p:nth-child(4) {
-  font-family: "ApercuPro-Bold", Arial, sans-serif;
+  font-family: "GillSans-Bold", Arial, sans-serif;
   margin-top: -0.5em;
   margin-bottom: 1.28571em; }
 
@@ -3802,7 +3854,7 @@ img.mfp-img {
     border: 2px solid #000; }
     .cabinet__info p {
       margin-top: 0;
-      font-family: "ApercuPro-Bold", Arial, sans-serif; }
+      font-family: "GillSans-Bold", Arial, sans-serif; }
   .cabinet__participant {
     font-size: 1.14286em;
     text-align: right;
@@ -3821,7 +3873,7 @@ img.mfp-img {
       width: 100%; }
   .cabinet__age {
     margin-bottom: 0.64286em;
-    font-family: "ApercuPro-Light", Arial, sans-serif !important; }
+    font-family: "GillSans-Regalar", Arial, sans-serif !important; }
   .cabinet__children {
     margin-bottom: 0.28571em; }
   .cabinet__social li {
@@ -3830,7 +3882,7 @@ img.mfp-img {
     .cabinet__social li:last-child {
       margin-right: 0; }
     .cabinet__social li a {
-      font-family: "ApercuPro-Bold", Arial, sans-serif;
+      font-family: "GillSans-Bold", Arial, sans-serif;
       font-size: 0.85714em;
       color: #000; }
       .cabinet__social li a:hover {
@@ -4051,7 +4103,7 @@ img.mfp-img {
   width: 18.64286em;
   padding-left: 0;
   padding-right: 0;
-  font-family: "ApercuPro-Light", Arial, sans-serif;
+  font-family: "GillSans-Regalar", Arial, sans-serif;
   text-align: center;
   cursor: pointer; }
 
@@ -4167,7 +4219,7 @@ img.mfp-img {
   width: 18.64286em;
   padding-left: 0;
   padding-right: 0;
-  font-family: "ApercuPro-Light", Arial, sans-serif;
+  font-family: "GillSans-Regalar", Arial, sans-serif;
   text-align: center;
   cursor: pointer; }
 
@@ -4300,7 +4352,7 @@ img.mfp-img {
       .news__info p:first-child {
         margin-top: 1em;
         margin-bottom: 0;
-        font-family: "ApercuPro-Bold", Arial, sans-serif; }
+        font-family: "GillSans-Bold", Arial, sans-serif; }
     .news__info--two-column {
       display: -webkit-box;
       display: -webkit-flex;
@@ -4401,7 +4453,7 @@ img.mfp-img {
       margin-left: 3.5em;
       margin-top: 0.85714em;
       margin-bottom: 0.85714em;
-      font-family: "ApercuPro-Bold", Arial, sans-serif;
+      font-family: "GillSans-Bold", Arial, sans-serif;
       z-index: -1; }
   .article p {
     margin-bottom: 1.92857em;
@@ -4457,7 +4509,7 @@ img.mfp-img {
     display: block;
     margin-bottom: 1.41667em;
     padding-top: 1px;
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     font-size: 0.85714em;
     text-decoration: none;
     color: #000;
@@ -4515,7 +4567,7 @@ img.mfp-img {
         .archive-sidebar__list li a:hover {
           text-decoration: underline; }
   .archive-sidebar__title {
-    font-family: "ApercuPro-Bold", Arial, sans-serif;
+    font-family: "GillSans-Bold", Arial, sans-serif;
     font-size: 0.85714em;
     margin-left: 1.35714em;
     margin-top: 1.07143em; }
@@ -4595,7 +4647,7 @@ img.mfp-img {
   outline: none; }
 
 body {
-  font-family: 'ApercuPro-Light', Arial, sans-serif;
+  font-family: 'GillSans-Regalar', Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   color: #000;
@@ -4609,7 +4661,7 @@ ul {
   list-style: none; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'ApercuPro-Bold', Arial, sans-serif; }
+  font-family: 'GillSans-Bold', Arial, sans-serif; }
 
 button {
   padding: 0;
@@ -4620,7 +4672,7 @@ a:hover {
   text-decoration: underline; }
 
 input[type=text], input[type=email] {
-  font-family: "ApercuPro-Light", Arial, sans-serif;
+  font-family: "GillSans-Regalar", Arial, sans-serif;
   margin-top: 0;
   margin-bottom: 0.42857em;
   padding: 0.67857em 0.71429em;

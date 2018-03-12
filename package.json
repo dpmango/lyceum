@@ -4,7 +4,8 @@
   "description": "Tempate with folder structure and helpful gulp tasks",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "surge": "gulp build && surge --domain lyceu.surge.sh --project ./dist"
   },
   "author": "Dmitry Fedorenko",
   "license": "ISC",

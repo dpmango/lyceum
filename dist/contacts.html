@@ -30,7 +30,9 @@
 
             <nav class="nav" style="display: none">
                 <div class="wrapper nav__wrapper">
-                    <button type="button" class="nav__close js-close-menu"></button>
+                    <button type="button" class="nav__close js-close-menu">
+                        <svg><use xlink:href="img/svg/symbols.svg#close"></use></svg>
+                    </button>
                     <div class="nav__col nav__col--collections">
                         <ul class="nav__list nav__list--girls">
                             <li class="nav__item nav__item--header">Коллекции</li>
@@ -146,15 +148,15 @@
         <main class="main">
             <section class="contacts">
                 <div class="contacts__item">
-                    <p class="contacts__address js-map contacts__address--open">г.Воронеж, ул.б-р Победы, 23Б, ТРК "АРЕНА" - 3й этаж, тел.202-85-60</p>
+                    <p class="contacts__address js-map contacts__address--open" data-src="pobeda">г.Воронеж, ул.б-р Победы, 23Б, ТРК "АРЕНА" - 3й этаж, тел.202-85-60</p>
                     <div id="map-pobeda" class="contacts__map contacts__map--open"></div>
                 </div>
                 <div class="contacts__item">
-                    <p class="contacts__address js-map">г.Воронеж, Ленинский проспект, 174П, ТРЦ "МАКСИМИР" - 2й этаж, тел.202-85-50</p>
+                    <p class="contacts__address js-map" data-src="lenin">г.Воронеж, Ленинский проспект, 174П, ТРЦ "МАКСИМИР" - 2й этаж, тел.202-85-50</p>
                     <div id="map-lenin" class="contacts__map"></div>
                 </div>
                 <div class="contacts__item">
-                    <p class="contacts__address js-map">г.Воронеж, ул Героев Сибиряков, 33. тел. 202-04-52</p>
+                    <p class="contacts__address js-map" data-src="sibir">г.Воронеж, ул Героев Сибиряков, 33. тел. 202-04-52</p>
                     <div id="map-sibir" class="contacts__map"></div>
                 </div>
             </section>
@@ -218,6 +220,8 @@
                 iconImageSize: [30, 41.5],
                 iconImageOffset: [-60, -75]
             };
+            var leninLoaded = false;
+            var sibirLoaded = false;
 
             ymaps.ready(init);
             function init(){
@@ -227,29 +231,38 @@
                     ],
                     zoom: 16
                 });
-                mapLenin = new ymaps.Map ("map-lenin", {
-                    center: [
-                        51.697198, 39.272664
-                    ],
-                    zoom: 16
-                });
-                mapSibir = new ymaps.Map ("map-sibir", {
-                    center: [
-                        51.649622, 39.137926
-                    ],
-                    zoom: 16
-                });
                 mapPobeda.behaviors.disable('scrollZoom');
-                mapLenin.behaviors.disable('scrollZoom');
-                mapSibir.behaviors.disable('scrollZoom');
+                mapPobeda.geoObjects.add(new ymaps.Placemark([51.710867, 39.159638], {}, placemarkConfig));
 
-                var mapPobedaPlacemark = new ymaps.Placemark([51.710867, 39.159638], {}, placemarkConfig);
-                var mapLeninPlacemark = new ymaps.Placemark([51.697198, 39.272664], {}, placemarkConfig);
-                var mapSibirPlacemark = new ymaps.Placemark([51.649622, 39.137926], {}, placemarkConfig);
-
-                mapPobeda.geoObjects.add(mapPobedaPlacemark);
-                mapLenin.geoObjects.add(mapLeninPlacemark);
-                mapSibir.geoObjects.add(mapSibirPlacemark);
+                $('.js-map').on('click', function () {
+                    console.log('js-open CLICK');
+                    var src = $(this).data('src');
+                    if(src === 'lenin' && !leninLoaded) {
+                        setTimeout(function () {
+                            mapLenin = new ymaps.Map ("map-lenin", {
+                                center: [
+                                    51.697198, 39.272664
+                                ],
+                                zoom: 16
+                            });
+                            mapLenin.behaviors.disable('scrollZoom');
+                            mapLenin.geoObjects.add(new ymaps.Placemark([51.697198, 39.272664], {}, placemarkConfig));
+                        }, 1000);
+                        leninLoaded = true;
+                    } else if (src === 'sibir' && !sibirLoaded) {
+                        setTimeout(function () {
+                            mapSibir = new ymaps.Map ("map-sibir", {
+                                center: [
+                                    51.649622, 39.137926
+                                ],
+                                zoom: 16
+                            });
+                            mapSibir.behaviors.disable('scrollZoom');
+                            mapSibir.geoObjects.add(new ymaps.Placemark([51.649622, 39.137926], {}, placemarkConfig));
+                        }, 1000);
+                        sibirLoaded = true;
+                    }
+                });
             }
         });
     </script>
