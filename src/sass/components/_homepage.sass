@@ -1,9 +1,19 @@
+.homepage
+  &__header-wrapper
+    width: 100%
+    background-color: #EDECF1
+    padding-bottom: em(100)
+
+  &__hero
+    margin-top: em(-137) !important
+    padding-bottom: em(200) !important
+
 .style-news
   position: relative
   margin-bottom: em(60)
   padding-top: 1px
   height: em(800)
-  background: url("../img/style-news.jpg") no-repeat  69% 0
+  background: url("../img/style-news.jpg") no-repeat  64% 0
 
   &__how-created
     float: left
@@ -121,6 +131,26 @@
     position: absolute
     right: em(-38)
     top: em(58)
+
+@media screen and (min-width: 1920px)
+  .homepage
+    &__header-wrapper::after
+      bottom: -100px
+
+    .style-news
+      background-position: 55% 0
+
+    .style-news__list
+      margin-top: 220px
+
+@media screen and (min-width: 1600px) and (max-width: 1899px)
+  .homepage
+    &__header-wrapper::after
+      bottom: -20px
+
+    .style-news
+      background-position: 60% 0
+
 
 @media  screen and (max-width: 1140px)
   .style-news

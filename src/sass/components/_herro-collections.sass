@@ -42,15 +42,24 @@
   &__photo
     position: absolute
     img
-      max-width: 338px
+      max-width: em(450)
 
     &--left
       left: em(34)
       top: em(5)
 
+      img
+        margin-top: em(-20)
+        margin-left: em(-70)
+
     &--right
-      right: em(69)
-      top: em(-35)
+      right: em(80)
+      top: em(-20)
+
+      img
+        max-width: em(350)
+        margin-top: em(-20)
+        margin-right: em(-19)
 
   &__collection
     float: left
@@ -60,6 +69,11 @@
     &--left
       margin-top: em(193)
       margin-left: 39.4%
+
+      img
+        margin-left: em(-55)
+
+
 
     &--right
       margin-top: em(129)
@@ -101,7 +115,7 @@
       bottom: -8%
 
     &--blue-left
-      right: 20%
+      right: 28%
       bottom: -23%
 
 /* MEDIA QUERIES */
@@ -109,6 +123,7 @@
 @media screen and (max-width: 1020px)
   .hero-collections
     overflow: visible
+    padding-bottom: 100px !important
 
     &__gradient
       margin-left: 0
@@ -116,6 +131,13 @@
       padding: 0 0 em(15) 0
       height: 100%
       transform: none
+
+    ul
+      column-gap: 30px
+
+    li
+      display: flex
+      justify-content: flex-start
 
 
     &__wrapper
@@ -141,7 +163,7 @@
     &__collection--right
       margin-right: -183px
       margin-left: 0
-      margin-top: 150px
+      margin-top: 200px
 
     &__cube--aqua-left
       top: 42%
@@ -163,6 +185,19 @@
   .hero-collections
     &--type-slider
       margin-bottom: 0
+
+    &__photo--left
+      img
+        margin-top: 30px
+        margin-left: 0
+
+    &__collection--left
+      margin-top: 250px
+
+    &__cube--white-left,
+    &__cube--aqua-left
+      display: none
+
 
 @media screen and (max-width: 540px)
   .hero-collections
@@ -196,3 +231,6 @@
   .hero-collections
     &__collection--left
       margin-top: 150px
+
+    &__collection--right
+      margin-top: 160px
