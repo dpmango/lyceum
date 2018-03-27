@@ -16,7 +16,7 @@ $(document).ready(function () {
         adaptiveHeight: true,
         prevArrow: "<span class='slider__arrow slider__arrow--prev'></span>",
         nextArrow: "<span class='slider__arrow slider__arrow--next'></span>",
-        autoplay: true,
+        //autoplay: true,
         autoplaySpeed: 4000
     });
 
@@ -162,6 +162,17 @@ $(document).ready(function () {
             $(this).find('img:last-of-type').fadeOut(150);
             $('.js-open-menu').find('img:first-of-type').fadeIn(250);
         }
+    });
+
+    $('.js-looks-pack-watch').on('click', function (e) {
+        e.preventDefault();
+        $(this).next().css('opacity', 1).css('display', 'block');
+        $('.looks-slider .slider__arrow').css('opacity', 0);
+    });
+
+    $('.js-looks-pack-close').on('click', function () {
+        $(this).parent().css('opacity', 0).css('display', 'none');
+        $('.looks-slider .slider__arrow').css('opacity', 1);
     });
 
     svg4everybody();
