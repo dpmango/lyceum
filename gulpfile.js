@@ -134,7 +134,7 @@ gulp.task('clean', function () {
 	return del.sync('dist');
 });
 
-gulp.task('build', ['clean', 'sass', 'css-libs', 'scripts', 'compressImages', 'sprite', 'svg-sprite', 'list-pages'], function () {
+gulp.task('build', ['clean', 'sass', 'css-libs', 'scripts', 'sprite', 'svg-sprite', 'list-pages'], function () {
 	gulp.src('src/*.html')
 		.pipe(gulp.dest('dist'));
 
