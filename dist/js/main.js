@@ -80,8 +80,19 @@ $(document).ready(function () {
 
     /* CONTACTS MAPS */
     $('.js-map').on('click', function () {
-       $(this).toggleClass('contacts__address--open');
-       $(this).next('.contacts__map').slideToggle(300);
+        var currentMap = $(this);
+
+        if(currentMap.next().hasClass('contacts__map--open')) {
+            currentMap.removeClass('contacts__address--open');
+            currentMap.next().removeClass('contacts__map--open').slideUp(300);
+        } else {
+            $('.contacts__address--open').removeClass('contacts__address--open');
+            $('.contacts__map--open').removeClass('contacts__map--open').slideUp(300);
+
+            currentMap.addClass('contacts__address--open');
+            currentMap.next().addClass('contacts__map--open').slideDown(300);
+        }
+
     });
 
     /* CHANGE REGISTRATION TYPE*/

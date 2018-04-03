@@ -159,6 +159,10 @@
                     <p class="contacts__address js-map" data-src="sibir">г.Воронеж, ул Героев Сибиряков, 33. тел. 202-04-52</p>
                     <div id="map-sibir" class="contacts__map"></div>
                 </div>
+                <div class="contacts__item">
+                    <p class="contacts__address js-map" data-src="sibir">Еще один адрес</p>
+                    <div id="map-other" class="contacts__map"></div>
+                </div>
             </section>
         </main>
 
@@ -231,7 +235,7 @@
                     ],
                     zoom: 16
                 });
-                mapPobeda.behaviors.disable('scrollZoom');
+                mapPobeda.behaviors.enable('scrollZoom');
                 mapPobeda.geoObjects.add(new ymaps.Placemark([51.710867, 39.159638], {}, placemarkConfig));
 
                 $('.js-map').on('click', function () {
@@ -245,7 +249,7 @@
                                 ],
                                 zoom: 16
                             });
-                            mapLenin.behaviors.disable('scrollZoom');
+                            mapLenin.behaviors.enable('scrollZoom');
                             mapLenin.geoObjects.add(new ymaps.Placemark([51.697198, 39.272664], {}, placemarkConfig));
                         }, 1000);
                         leninLoaded = true;
@@ -257,7 +261,7 @@
                                 ],
                                 zoom: 16
                             });
-                            mapSibir.behaviors.disable('scrollZoom');
+                            mapSibir.behaviors.enable('scrollZoom');
                             mapSibir.geoObjects.add(new ymaps.Placemark([51.649622, 39.137926], {}, placemarkConfig));
                         }, 1000);
                         sibirLoaded = true;

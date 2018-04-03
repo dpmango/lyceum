@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var _document = $(document);
+    var _window = $(window)
 
 	$('.js-open-menu').on('click', function () {
         $('nav').fadeIn(200);
@@ -22,7 +23,8 @@ $(document).ready(function () {
 
     /* VACANCIES SWITCHER */
     $('.js-vacancies').on('click', function () {
-        if(window.screen.width <= 992) {
+
+        if(_window.width() <= 992) {
             $(this).toggleClass('is-open');
             $(this).find('.vacancies__description').slideToggle(300);
             $(this).find('.vacancies__btn').fadeToggle(300).css("display","inline-block");
@@ -161,7 +163,7 @@ $(document).ready(function () {
     });
 
     $('.js-open-menu').mouseover(function() {
-        if(window.screen.width >= 767) {
+        if(_window.width() >= 767) {
             $(this).find('img:first-of-type').fadeOut(150);
             $('.js-open-menu').find('img:last-of-type').fadeIn(250);
         }
@@ -169,7 +171,7 @@ $(document).ready(function () {
     });
 
     $('.js-open-menu').mouseleave(function() {
-        if(window.screen.width >= 767) {
+        if(_window.width() >= 767) {
             $(this).find('img:last-of-type').fadeOut(150);
             $('.js-open-menu').find('img:first-of-type').fadeIn(250);
         }
