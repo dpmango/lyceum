@@ -25,6 +25,9 @@
     img
       width: 100%
 
+  &:last-child
+    margin-bottom: 0
+
   &__title
     margin-top: em(2, 14)
     margin-bottom: em(7, 14)
@@ -67,29 +70,33 @@
       margin-right: 0
 
 .cart-info
+  display: flex
+  flex-direction: column
   flex-basis: 30%
   margin-left: em(10)
 
   &__stock
-    padding: em(8) em(20) em(28) em(46)
+    height: 100%
+    margin-top: 10px
+    padding: em(8) em(25) em(30) em(25)
     border: em(2) solid $mainColor
 
 
   &__application
     margin-bottom: em(8)
-    padding: 0 em(31) em(2) em(42)
+    padding: 0 em(25) em(2) em(25)
     border: em(2) solid $mainColor
 
   &__title
-    margin-bottom: em(19, 14)
-    font-size: em(14)
+    margin-bottom: em(19, 12)
+    font-size: em(12)
     text-transform: uppercase
     &--main
       margin-bottom: em(21)
       font-family: $apercuBold
 
     &:nth-child(4)
-      margin-top: em(20, 14)
+      margin-top: em(20, 12)
       margin-bottom: 0
 
     &:nth-child(5)
@@ -220,27 +227,45 @@
     flex-basis: 100%
 
   .cart-info
-    display: flex
+    flex-direction: row
+    margin-top: 10px
     margin-left: 0
+    width: 100%
+    flex-basis: 100%
 
   .cart-info__application
-    padding: 15px 50px
+    padding: 15px 35px
     margin-right: 30px
+    margin-bottom: 0
 
   .cart-info__stock
-    padding: 15px 65px
+    margin-top: 0
+    height: auto
+    padding: 15px 35px 30px
+    flex-basis: 50%
 
 @media screen and (max-width: 660px)
   .cart-info
     flex-direction: column
     flex-basis: 100%
+    
+    &__additional
+      text-align: left
 
   .cart-info__application
     flex-basis: 100%
     margin-right: 0
 
   .cart-info__stock
+    margin-top: 10px
     flex-basis: 100%
+    margin-bottom: 100px
+    
+    p
+      text-align: left
+
+      &:nth-child(3)
+        text-align: left
 
   .cart-item__buttons
     float: none
@@ -257,6 +282,10 @@
 
 @media screen and (max-width: 440px)
   .cart-info__application
+    padding-left: 12px
+    padding-right: 12px
+
+  .cart-info__stock
     padding-left: 12px
     padding-right: 12px
 

@@ -183,21 +183,46 @@
 
 @media screen and (max-width: 767px)
   .hero-collections
+    &__item
+      flex-wrap: wrap
+
+    &__photo
+      flex-basis: 100%
+
+
+
     &--type-slider
       margin-bottom: 0
 
     &__photo--left
+      margin-left: 0 !important
+      margin-top: -30px !important
+
       img
         margin-top: 30px
         margin-left: 0
 
     &__collection--left
-      margin-top: 250px
+      margin-left: 30px
+      margin-top: -250px !important
+      ul
+        margin-top: 0
+
+    &__collection--right
+      margin-top: -234px
+      margin-left: 0
+      margin-right: 200px
+      order: 1
 
     &__cube--white-left,
     &__cube--aqua-left
       display: none
 
+    &__photo--right
+      text-align: right
+      img
+        max-width: 329px
+        margin-right: 70px
 
 @media screen and (max-width: 540px)
   .hero-collections
@@ -210,10 +235,16 @@
       margin-top: 0
 
 @media screen and (max-width: 460px)
+  .hero-collections__photo--right img
+    margin-right: 0
+
   .hero-collections
+    &__collection
+      margin-left: auto
+      margin-right: auto
     &__photo
       img
-        width: 100%
+        width: 100% !important
 
     &__cube--aqua-left
       display: none
@@ -230,7 +261,9 @@
 @media screen and (max-width: 380px)
   .hero-collections
     &__collection--left
-      margin-top: 150px
+      margin-top: -150px !important
 
-    &__collection--right
-      margin-top: 160px
+@media screen and (max-width: 340px)
+  .hero-collections__photo--right img
+    width: auto !important
+    max-width: 245px
