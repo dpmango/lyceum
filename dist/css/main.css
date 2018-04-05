@@ -2028,8 +2028,11 @@ img.mfp-img {
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1; }
-  .subscribe__text br {
-    display: none; } }
+  .subscribe__text {
+    padding-left: 5px;
+    padding-right: 5px; }
+    .subscribe__text br {
+      display: none; } }
 
 .slider {
   max-width: 65.71429em;
@@ -2741,7 +2744,11 @@ img.mfp-img {
   .hero-collections__cube--blue-left {
     display: none; }
   .hero-collections__slider {
-    padding: 15px; } }
+    padding: 15px; }
+  .hero-collections__photo--left {
+    margin-left: -8% !important; }
+    .hero-collections__photo--left img {
+      width: 108% !important; } }
 
 @media screen and (max-width: 380px) {
   .hero-collections__collection--left {
@@ -3930,7 +3937,9 @@ img.mfp-img {
     padding-right: 20px; }
   .cart-item__image {
     margin: 20px auto;
-    float: none; } }
+    float: none; }
+  .cart-info__title br {
+    display: none; } }
 
 @media screen and (max-width: 440px) {
   .cart-info__application {
@@ -4660,13 +4669,23 @@ img.mfp-img {
     margin-bottom: 0.25em;
     font-size: 3.42857em;
     text-transform: uppercase; }
+  .article-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .article-row__col {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 50%;
+      -ms-flex: 0 1 50%;
+      flex: 0 1 50%; }
   .article .main-photo {
     position: relative;
     float: left;
     display: inline-block;
     max-width: 39.92857em;
     max-height: 32em;
-    margin: 6.14286em 3.64286em 7.14286em -2.07143em;
+    margin: 6.14286em 3.64286em 5.71429em -2.07143em;
     z-index: 5; }
     .article .main-photo::after {
       content: '';
@@ -4706,8 +4725,10 @@ img.mfp-img {
     padding-right: 20px; }
     .article .main-photo {
       float: none;
-      margin-bottom: 70px;
-      margin-left: 0; } }
+      margin-bottom: 50px;
+      margin-left: 0; }
+    .article-row {
+      display: block; } }
 
 @media screen and (max-width: 566px) {
   .article-wrapper {
@@ -4734,7 +4755,9 @@ img.mfp-img {
 .archive {
   padding-top: 1.5em;
   padding-left: 18.42857em;
-  background: url("../img/style-news.jpg") no-repeat 4.42857em 5em; }
+  background: url("../img/style-news.png") no-repeat 0 20px;
+  -webkit-background-size: contain;
+  background-size: contain; }
   .archive__club360 {
     display: block;
     margin-bottom: 1.41667em;
