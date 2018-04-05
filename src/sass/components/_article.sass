@@ -12,6 +12,10 @@
     font-size: em(48)
     text-transform: uppercase
 
+  &-row
+    display: flex
+    &__col
+      flex: 0 1 50%
 
   .main-photo
     position: relative
@@ -19,7 +23,7 @@
     display: inline-block
     max-width: em(559)
     max-height: em(448)
-    margin: em(86) em(51) em(100) em(-29)
+    margin: em(86) em(51) em(80) em(-29)
     z-index: 5
     &::after
       content: ''
@@ -60,10 +64,11 @@
     padding-right: 20px
     .main-photo
       float: none
-      margin-bottom: 70px
+      margin-bottom: 50px
       margin-left: 0
 
-
+    &-row
+      display: block
 @media screen and (max-width: 566px)
   .article-wrapper
     margin-top: 30px
